@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Broad Experiential Ltd – Advanced Branding Agency</title>
+  <!-- ===== FAVICONS ===== -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon_io/favicon.svg" />
+  <link rel="manifest" href="images/favicon_io/site.webmanifest" />
+  <meta name="msapplication-TileColor" content="#0A2C4C" />
+  <meta name="theme-color" content="#0A2C4C" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">Broad<span>Experiential</span></div>
+      <div class="preloader__spinner"></div>
+    </div>
+  </div>
+
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__top" id="headerTop">
+      <div class="container header__top-container">
+        <div class="header__contact">
+          <a href="tel:+254722636674"><i class="fas fa-phone-alt"></i> +254 722 636 674</a>
+          <a href="mailto:sales@broadexperiential.com"><i class="fas fa-envelope"></i> sales@broadexperiential.com</a>
+        </div>
+        <div class="header__right">
+          <div class="header__social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon" id="themeIcon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__main">
+      <div class="container header__main-container">
+       <a href="#" class="logo" id="logoLink">
+  <img src="images/logo.webp" alt="Broad Experiential Logo" class="logo__image" id="logoImage" />
+</a>
+        <nav class="nav" id="nav">
+          <ul class="nav__list">
+            <li class="nav__mobile-contact">
+              <a href="tel:+254722636674"><i class="fas fa-phone-alt"></i> +254 722 636 674</a>
+              <a href="mailto:sales@broadexperiential.com"><i class="fas fa-envelope"></i> sales@broadexperiential.com</a>
+            </li>
+            <li><a href="#home" class="nav__link active">Home</a></li>
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#services" class="nav__link">Services</a></li>
+            <li><a href="#clientele" class="nav__link">Clientele</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div id="mainContent">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero__slider" id="heroSlider">
+        <div class="hero__slide active" style="background-image: url('images/slide_1.jpg');">
+          <div class="hero__overlay"></div>
+        </div>
+        <div class="hero__slide" style="background-image: url('images/slide_2.jpg');">
+          <div class="hero__overlay"></div>
+        </div>
+        <div class="hero__slide" style="background-image: url('images/slide_3.webp');">
+          <div class="hero__overlay"></div>
+        </div>
+      </div>
+
+      <div class="container hero__container">
+        <div class="hero__content">
+          <span class="hero__badge">Est. 2015</span>
+          <h1 class="hero__title">
+            Receive, Review, Plan &amp; Execute<br />
+            <span>with Passion and Excellence.</span>
+          </h1>
+          <p class="hero__subtitle">
+            We are your <span class="typed-text" id="typedText"></span>
+          </p>
+          <div class="hero__actions">
+            <a href="#services" class="btn btn--primary">Explore Services</a>
+            <a href="#contact" class="btn btn--outline">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero__stats glass">
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="200">0</span>
+            <span class="hero__stat-label">+ Brands Served</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="150">0</span>
+            <span class="hero__stat-label">+ Projects</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="12">0</span>
+            <span class="hero__stat-label">+ Years</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__dots" id="heroDots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__tag">About Us</span>
+      <h2 class="section__title">Who We Are</h2>
+      <p class="section__subtitle">
+        Broad Experiential Ltd is an Out Of Home marketing company focused on consumer-facing branding solutions across East Africa.
+      </p>
+    </div>
+
+    <div class="about__grid">
+      <!-- Left Column: Text Content -->
+      <div class="about__content">
+        <p>
+          Over the years we have acquired vast experience in
+          <strong>Experiential Marketing</strong>, <strong>Digital Marketing</strong>,
+          <strong>Printing</strong>, <strong>Branding</strong> and
+          <strong>Design</strong> across the East African region. We have forged
+          relationships that enable us offer affordable and competitive rates.
+        </p>
+        <p>We take the headache off you through:</p>
+        <ul class="about__list">
+          <li>
+            <span class="list-marker">◆</span>
+            <strong>Negotiations</strong>– all rates &amp; county fees associated with branding activities.
+          </li>
+          <li>
+            <span class="list-marker">◆</span>
+            <strong>Relationships</strong>– we foster strong relationships across the country. There is nowhere we can not ensure your branding appears!
+          </li>
+          <li>
+            <span class="list-marker">◆</span>
+            <strong>Reporting</strong>– we will ensure that reports and updates are on your desk on time.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Image + Cards -->
+      <div class="about__image-wrapper">
+        <div class="about__image-container">
+          <img src="images/logo.webp" alt="Broad Experiential Logo" />
+        </div>
+        <div class="about__cards">
+          <div class="about__card about__card--vision">
+            <h3>Vision</h3>
+            <p>Leading branding solution provider for enterprise &amp; SME in East Africa.</p>
+          </div>
+          <div class="about__card about__card--mission">
+            <h3>Mission</h3>
+            <p>Creative &amp; out-of-the-ordinary branding to help you stand out.</p>
+          </div>
+          <div class="about__card about__card--values">
+            <h3>Values</h3>
+            <p>Reliability, Honesty, Efficiency, Quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- ===== SERVICES (UPDATED: Image Overlay Cards with Button) ===== -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">What We Do</span>
+          <h2 class="section__title">Our Services</h2>
+          <p class="section__subtitle">Real-world branding solutions that make your mark.</p>
+        </div>
+
+        <div class="filter__bar">
+          <button class="filter__btn active" data-filter="all">All</button>
+          <button class="filter__btn" data-filter="branding">Branding</button>
+          <button class="filter__btn" data-filter="printing">Printing</button>
+          <button class="filter__btn" data-filter="promotions">Promotions</button>
+        </div>
+
+        <div class="services__grid" id="servicesGrid">
+          <!-- Card 1: Vehicle Branding -->
+          <div class="services__card" data-category="branding" data-service="vehicle-branding">
+            <div class="services__card-img" style="background-image: url('images/car_branding/Successful and Delivered(JPG).jpg');">
+              <div class="services__card-overlay">
+                <div class="services__card-body">
+                  <h3>Vehicle Branding</h3>
+                  <p>Full fleet branding that turns your vehicles into moving billboards.</p>
+                  <button class="services__card-btn" data-service="vehicle-branding">
+                    View Our Work <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Shop Branding -->
+          <div class="services__card" data-category="branding" data-service="shop-branding">
+            <div class="services__card-img" style="background-image: url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&q=80');">
+              <div class="services__card-overlay">
+                <div class="services__card-body">
+                  <h3>Shop Branding</h3>
+                  <p>Complete retail space branding that enhances the customer experience.</p>
+                  <button class="services__card-btn" data-service="shop-branding">
+                    View Our Work <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Signages -->
+          <div class="services__card" data-category="branding" data-service="signages">
+            <div class="services__card-img" style="background-image: url('https://images.unsplash.com/photo-1553531384-cc0ac1ae1f0d?w=600&q=80');">
+              <div class="services__card-overlay">
+                <div class="services__card-body">
+                  <h3>Signages</h3>
+                  <p>High‑impact indoor and outdoor signage solutions.</p>
+                  <button class="services__card-btn" data-service="signages">
+                    View Our Work <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Wall Branding -->
+          <div class="services__card" data-category="branding" data-service="wall-branding">
+            <div class="services__card-img" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80');">
+              <div class="services__card-overlay">
+                <div class="services__card-body">
+                  <h3>Wall Branding</h3>
+                  <p>Large‑scale wall murals and graphics that transform spaces.</p>
+                  <button class="services__card-btn" data-service="wall-branding">
+                    View Our Work <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Office Branding -->
+          <div class="services__card" data-category="branding" data-service="office-branding">
+            <div class="services__card-img" style="background-image: url('images/office_branding.jpg');">
+              <div class="services__card-overlay">
+                <div class="services__card-body">
+                  <h3>Office Branding</h3>
+                  <p>Professional office environments that reflect your brand culture.</p>
+                  <button class="services__card-btn" data-service="office-branding">
+                    View Our Work <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Printing & Design -->
+          <div class="services__card" data-category="printing" data-service="printing-design">
+            <div class="services__card-img" style="background-image: url('https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=600&q=80');">
+              <div class="services__card-overlay">
+                <div class="services__card-body">
+                  <h3>Printing &amp; Design</h3>
+                  <p>Digital, screen/offset, and heat press for all your collateral.</p>
+                  <button class="services__card-btn" data-service="printing-design">
+                    View Our Work <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Merchandise Branding -->
+          <div class="services__card" data-category="printing" data-service="merchandise-branding">
+            <div class="services__card-img" style="background-image: url('https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=600&q=80');">
+              <div class="services__card-overlay">
+                <div class="services__card-body">
+                  <h3>Merchandise Branding</h3>
+                  <p>Custom T‑shirts, caps, mugs, and promotional items.</p>
+                  <button class="services__card-btn" data-service="merchandise-branding">
+                    View Our Work <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: Experiential Promotions -->
+          <div class="services__card" data-category="promotions" data-service="experiential-promotions">
+            <div class="services__card-img" style="background-image: url('https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600&q=80');">
+              <div class="services__card-overlay">
+                <div class="services__card-body">
+                  <h3>Experiential Promotions</h3>
+                  <p>Immersive brand activations that create memorable connections.</p>
+                  <button class="services__card-btn" data-service="experiential-promotions">
+                    View Our Work <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: Branding Strategy -->
+          <div class="services__card" data-category="branding" data-service="branding-strategy">
+            <div class="services__card-img" style="background-image: url('https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80');">
+              <div class="services__card-overlay">
+                <div class="services__card-body">
+                  <h3>Branding Strategy</h3>
+                  <p>Strategic brand identity development that captures your essence.</p>
+                  <button class="services__card-btn" data-service="branding-strategy">
+                    View Our Work <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRINTING ===== -->
+    <section class="printing">
+      <div class="container printing__grid">
+        <div class="printing__item">
+          <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=400&q=80" alt="Digital" />
+          <h3>Digital Printing</h3>
+          <ul><li>Annual Reports</li><li>Posters</li><li>Brochures</li><li>Company Profiles</li><li>Magazines</li></ul>
+        </div>
+        <div class="printing__item">
+          <img src="https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=400&q=80" alt="Screen" />
+          <h3>Screen / Offset</h3>
+          <ul><li>Calendars</li><li>Trophies</li><li>Plaques</li><li>Safety Signage</li><li>Packaging</li></ul>
+        </div>
+        <div class="printing__item">
+          <img src="https://images.unsplash.com/photo-1585499629798-8fbc9d8c49e?w=400&q=80" alt="Heat Press" />
+          <h3>Heat Press</h3>
+          <ul><li>T‑shirts</li><li>Caps</li><li>Mugs</li><li>Plates</li><li>Collateral</li><li>Gift Items</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLIENTELE ===== -->
+    <section class="clientele" id="clientele">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Our Partners</span>
+          <h2 class="section__title">Our Clientele</h2>
+          <p class="section__subtitle">Trusted by leading brands across East Africa.</p>
+        </div>
+        <div class="clientele__grid">
+          <div class="clientele__item" data-client="sunking">
+            <img src="images/clients/sunking.png" alt="Sunking" />
+            <span>Sunking</span>
+            <p class="clientele__tagline">Affordable Solar Systems in Kenya</p>
+          </div>
+          <div class="clientele__item" data-client="simpli-delivered">
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=200&q=80" alt="Simpli" />
+            <span>SimpliDelivered</span>
+            <p class="clientele__tagline">Goodness Guaranteed</p>
+          </div>
+          <div class="clientele__item" data-client="dimension-data">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&q=80" alt="Dimension" />
+            <span>Dimension Data</span>
+            <p class="clientele__tagline">Let's Do More</p>
+          </div>
+          <div class="clientele__item" data-client="plus-more">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=200&q=80" alt="Enterprise" />
+            <span>Plus More</span>
+            <p class="clientele__tagline">Enterprise &amp; SME Partners</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Get in Touch</span>
+          <h2 class="section__title">Contact Us</h2>
+          <p class="section__subtitle">Let's bring your brand to life. Reach out today.</p>
+        </div>
+        <div class="contact__grid">
+          <div class="contact__info">
+            <div class="contact__info-item"><img src="https://images.unsplash.com/photo-1577412647305-991150c7d163?w=100&q=80" alt="Office" /><div><h4>Office</h4><p>Epren Centre, Mumias South Rd, 2nd Floor, Suite 4, P.O Box 46433 – 00100, Nairobi.</p></div></div>
+            <div class="contact__info-item"><img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=100&q=80" alt="Phone" /><div><h4>Phone</h4><p><a href="tel:+254722636674">+254 722 636 674</a></p></div></div>
+            <div class="contact__info-item"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=100&q=80" alt="Email" /><div><h4>Email</h4><p><a href="mailto:sales@broadexperiential.com">sales@broadexperiential.com</a></p></div></div>
+            <!-- <div class="contact__info-item"><img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=100&q=80" alt="Website" /><div><h4>Website</h4><p><a href="https://www.broadexperiential.com" target="_blank">www.broadexperiential.com</a></p></div></div> -->
+          </div>
+          <form class="contact__form" id="contactForm">
+            <div class="contact__form-group"><label for="name">Your Name</label><input type="text" id="name" placeholder="John Doe" required /></div>
+            <div class="contact__form-group"><label for="email">Email</label><input type="email" id="email" placeholder="john@example.com" required /></div>
+            <div class="contact__form-group"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="+254 700 000 000" /></div>
+            <div class="contact__form-group"><label for="message">Message</label><textarea id="message" rows="5" placeholder="Tell us about your branding needs..." required></textarea></div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div> <!-- End Main Content -->
+
+  <!-- ===== SERVICE / CLIENTELE DETAIL VIEW ===== -->
+  <section class="service-detail" id="serviceDetail">
+    <!-- Fixed Back Button (always visible) -->
+    <button class="detail-back-btn" id="detailBackBtn">
+      <i class="fas fa-arrow-left"></i> Back
+    </button>
+    <div class="detail-container" id="detailContainer">
+      <!-- Dynamic content rendered by JavaScript -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="logo logo--footer"><span class="logo__text">Broad<span>Experiential</span></span></a>
+        <p>Receive, Review, Plan &amp; Execute with Passion and Excellence.</p>
+        <div class="footer__social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer__links"><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#clientele">Clientele</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div class="footer__links"><h4>Services</h4><ul><li><a href="#services">Branding</a></li><li><a href="#services">Signages</a></li><li><a href="#services">Vehicle Branding</a></li><li><a href="#services">Printing</a></li><li><a href="#services">Promotions</a></li></ul></div>
+      <div class="footer__contact"><h4>Contact Info</h4><ul><li>Epren Centre, Mumias South Rd</li><li><a href="tel:+254722636674">+254 722 636 674</a></li><li><a href="mailto:sales@broadexperiential.com">sales@broadexperiential.com</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><p>&copy; 2026 <strong>Broad Experiential Ltd</strong>. All rights reserved.</p><p class="footer__bottom-tagline">Out of Home · Experiential · Branding</p></div>
+  </footer>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <button class="scroll-top" id="scrollTop"><span>↑</span></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
