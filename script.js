@@ -10,10 +10,10 @@ const serviceData = {
       { number: '100%', label: 'Satisfaction Rate' },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1542282088-fe8426682b8f?w=600&q=80',
-      'https://images.unsplash.com/photo-1606728035253-49e8a23146de?w=600&q=80',
-      'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80',
-      'https://images.unsplash.com/photo-1549317661-b3d0328f8cc5?w=600&q=80',
+      'images/car_branding/carbranding2.webp',
+      'images/car_branding/carbranding4.jpg',
+      'images/car_branding/carbranding5.jpg',
+      'images/car_branding/carbranding6.jpg',
     ]
   },
   'shop-branding': {
@@ -51,17 +51,17 @@ const serviceData = {
   'wall-branding': {
     title: 'Wall Branding',
     description: 'Turn blank walls into powerful brand statements. Our large-scale murals and graphics transform spaces and captivate audiences.',
-    heroImage: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80',
+    heroImage: 'images/wall_branding/vihiga_wallbranding.jfif',
     stats: [
       { number: '100+', label: 'Walls Transformed' },
       { number: '40+', label: 'Corporate Spaces' },
       { number: '100%', label: 'Visual Impact' },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85f8b0?w=600&q=80',
-      'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600&q=80',
+      'images/wall_branding/vihiga_wallbranding2.jfif',
+      'images/wall_branding/itel_wallbranding1.jfif',
+      'images/wall_branding/itel_wallbranding.jfif',
+      'images/wall_branding/vihiga_wallbranding.jfif',
     ]
   },
   'office-branding': {
@@ -83,7 +83,7 @@ const serviceData = {
   'printing-design': {
     title: 'Printing & Design',
     description: 'High-quality printing and design services for all your marketing collateral. From digital to screen printing, we bring your ideas to life.',
-    heroImage: 'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=1200&q=80',
+    heroImage: 'images/print/print1.webp',
     stats: [
       { number: '1M+', label: 'Prints Delivered' },
       { number: '100+', label: 'Design Projects' },
@@ -164,7 +164,7 @@ const clienteleData = {
       'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80',
     ]
   },
-  'simpli-delivered': {
+  'world-vision': {
     title: 'SimpliDelivered',
     description: 'SimpliDelivered promises "Goodness Guaranteed". We helped them build a cohesive brand identity that emphasizes reliability, freshness, and customer trust across their delivery network.',
     heroImage: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80',
@@ -180,8 +180,8 @@ const clienteleData = {
       'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&q=80',
     ]
   },
-  'dimension-data': {
-    title: 'Dimension Data',
+  'fresh-life': {
+    title: 'Fresh Life',
     description: 'Dimension Data challenged us to brand their corporate environments with a "Let\'s Do More" ethos. We delivered modern, tech-forward office branding that inspires innovation and collaboration.',
     heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80',
     stats: [
@@ -196,22 +196,87 @@ const clienteleData = {
       'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80',
     ]
   },
-  'plus-more': {
-    title: 'Enterprise & SME Partners',
-    description: 'We are proud to partner with a diverse range of enterprises and SMEs across East Africa. Our tailored solutions help businesses of all sizes stand out and achieve their branding goals.',
-    heroImage: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80',
+  'mgas': {
+    title: 'M-Gas',
+    description: 'M-Gas empowers you with affordable and clean cooking solutions, to help you enjoy your cooking experience.',
+    heroImage: 'images/clients/m_gas_logo.jfif',
     stats: [
       { number: '200+', label: 'Enterprise Partners' },
       { number: '150+', label: 'SME Clients' },
       { number: '4.9/5', label: 'Client Rating' },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80',
-      'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80',
+      'images/clients/mgas/mgas1.webp',
+      'images/clients/mgas/mgas2.webp',
+      'images/clients/mgas/mgas3.webp',
+      'images/clients/mgas/mgas4.webp',
+      'images/clients/mgas/mgas5.webp',
     ]
-  }
+  },
+  'telkom': {
+  title: 'Telkom',
+  description: "Kenya's leading telecommunications provider trusted by millions. We partnered with Safaricom to deliver premium branding solutions across their expansive network and retail presence.",
+  heroImage: 'images/clients/telkom-kenya.webp',
+  stats: [
+    { number: '50+', label: 'Retail Outlets' },
+    { number: '30+', label: 'Branding Projects' },
+    { number: '100%', label: 'Client Satisfaction' },
+  ],
+  gallery: [
+    'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80',
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
+    'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+    'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80',
+  ]
+},
+'uip-real-estate': {
+  title: 'UIP Real Estate',
+  description: "Kenya's trusted real estate company. Browse affordable land, residential, commercial & industrial properties.",
+  heroImage: 'images/clients/uip_real_estate.jfif',
+  stats: [
+    { number: '100+', label: 'Branches Branded' },
+    { number: '20+', label: 'Corporate Projects' },
+    { number: '99%', label: 'Quality Rating' },
+  ],
+  gallery: [
+    'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=600&q=80',
+    'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+    'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80',
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
+  ]
+},
+'rachier-and-amollo': {
+  title: 'Rachier and Amollo LLP',
+  description: 'Nationally recognized, dynamic and result oriented law firm.',
+  heroImage: 'images/clients/rachier_and_amollo.png',
+  stats: [
+    { number: '40+', label: 'Projects Complete' },
+    { number: '15+', label: 'Lounge Projects' },
+    { number: '100%', label: 'Quality Assurance' },
+  ],
+  gallery: [
+    'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80',
+    'https://images.unsplash.com/photo-1542296332-2e4473faf563?w=600&q=80',
+    'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80',
+    'https://images.unsplash.com/photo-1542818219-3daa53ab5d5b?w=600&q=80',
+  ]
+},
+'sistema-bio': {
+  title: 'Sistema Bio',
+  description: 'Sistema.bio is a prefabricated modular biodigester package that includes a full suite of biogas appliances and connections',
+  heroImage: 'images/clients/sistema_bio.png',
+  stats: [
+    { number: '60+', label: 'Retail Activations' },
+    { number: '25+', label: 'Branding Projects' },
+    { number: '98%', label: 'Consumer Engagement' },
+  ],
+  gallery: [
+    'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
+    'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
+    'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
+    'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
+  ]
+}
 };
 
 // ===== DOM REFS =====
@@ -551,16 +616,60 @@ function showToast(message, type = 'success') {
 
 // ===== CONTACT FORM =====
 const form = document.getElementById('contactForm');
+const status = document.getElementById('formStatus');
+
+// Service labels for readable output
+const serviceLabels = {
+  'vehicle-branding': 'Vehicle Branding',
+  'shop-branding': 'Shop Branding',
+  'signages': 'Signages',
+  'wall-branding': 'Wall Branding',
+  'office-branding': 'Office Branding',
+  'printing-design': 'Printing & Design',
+  'merchandise-branding': 'Merchandise Branding',
+  'experiential-promotions': 'Experiential Promotions',
+  'branding-strategy': 'Branding Strategy',
+  'general-inquiry': 'General Inquiry'
+};
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const service = document.getElementById('service').value;
   const message = document.getElementById('message').value.trim();
-  if (!name || !email || !message) { showToast('Please fill in all required fields.', 'error'); return; }
-  if (!email.includes('@') || !email.includes('.')) { showToast('Please enter a valid email address.', 'error'); return; }
+
+  // Validation
+  if (!name || !email || !service || !message) {
+    showToast('Please fill in all required fields.', 'error');
+    return;
+  }
+
+  if (!email.includes('@') || !email.includes('.')) {
+    showToast('Please enter a valid email address.', 'error');
+    return;
+  }
+
+  const serviceName = serviceLabels[service] || service;
+
+  // Log the full message (replace with API call later)
+  console.log('=== New Inquiry ===');
+  console.log(`Name: ${name}`);
+  console.log(`Email: ${email}`);
+  console.log(`Phone: ${phone || 'Not provided'}`);
+  console.log(`Service: ${serviceName}`);
+  console.log(`Message: ${message}`);
+  console.log('===================');
+
   showToast('Sending your message...', 'success');
+
   setTimeout(() => {
-    showToast('✅ Thank you! We\'ll get back to you soon.', 'success');
+    showToast(
+      `✅ Thank you ${name}! We've received your inquiry about ${serviceName}. We'll get back to you soon.`,
+      'success'
+    );
     form.reset();
   }, 1500);
 });
