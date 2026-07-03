@@ -747,3 +747,68 @@ document.querySelectorAll('.clientele__btn').forEach(btn => {
     }
   });
 });
+
+
+// Cookies
+// ============================================================
+// COOKIE CONSENT
+// ============================================================
+(function() {
+  const banner = document.getElementById('cookieBanner');
+  const acceptBtn = document.getElementById('cookieAccept');
+  const declineBtn = document.getElementById('cookieDecline');
+
+  // Check if consent cookie exists
+  function getCookieConsent() {
+    const name = 'cookie_consent=';
+    const decoded = decodeURIComponent(document.cookie);
+    const arr = decoded.split('; ');
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].indexOf(name) === 0) {
+        return arr[i].substring(name.length);
+      }
+    }
+    return null;
+  }
+
+  // Set consent cookie (expires in 365 days)
+  function setCookieConsent(value) {
+    const expiry = new Date();
+    expiry.setFullYear(expiry.getFullYear() + 1);
+    document.cookie = `cookie_consent=${value}; expires=${expiry.toUTCString()}; path=/; SameSite=Lax; Secure`;
+  }
+
+  // Hide banner and store consent
+  function acceptAll() {
+    setCookieConsent('accepted');
+    banner.classList.remove('active');
+    // Optionally, fire your third-party scripts here (e.g., Google Analytics)
+    console.log('Cookies accepted. You can now load third-party scripts.');
+  }
+
+  function decline() {
+    setCookieConsent('declined');
+    banner.classList.remove('active');
+    console.log('Cookies declined. Third-party scripts will not load.');
+  }
+
+  // Show banner if no consent yet
+  if (!getCookieConsent()) {
+    // Small delay to let page load smoothly
+    setTimeout(() => {
+      banner.classList.add('active');
+    }, 800);
+  }
+
+  // Event listeners
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', acceptAll);
+  }
+
+  if (declineBtn) {
+    declineBtn.addEventListener('click', decline);
+  }
+
+  // Optional: If user clicks outside or presses ESC, you can also decline (or ignore)
+  // We'll keep it simple.
+})();
