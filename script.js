@@ -287,7 +287,7 @@ const body = document.body;
 const logoLink = document.getElementById('logoLink');
 const backBtn = document.getElementById('detailBackBtn');
 
-let returnSectionId = '#services'; // Default to Services
+let returnSectionId = '#services';
 
 // ===== RENDER DETAIL VIEW =====
 function renderDetail(id, type) {
@@ -336,7 +336,6 @@ function renderDetail(id, type) {
     </div>
   `;
 
-  // Show detail, hide main content
   detailSection.classList.add('active');
   mainContent.style.display = 'none';
   body.classList.add('detail-active');
@@ -344,21 +343,19 @@ function renderDetail(id, type) {
   window.scrollTo(0, 0);
 }
 
-// ===== HIDE DETAIL VIEW (Smart Return) =====
+// ===== HIDE DETAIL VIEW =====
 function hideDetail() {
   detailSection.classList.remove('active');
   mainContent.style.display = 'block';
   body.classList.remove('detail-active');
 
-  // Remove hash to prevent re-trigger
   if (window.location.hash) {
     history.pushState(null, null, ' ');
   }
 
-  // Scroll back to where the user was (Services or Clientele section)
   const targetElement = document.querySelector(returnSectionId);
   if (targetElement) {
-    const offset = 80; // Account for fixed header
+    const offset = 80;
     const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
     window.scrollTo({ top: targetPosition, behavior: 'smooth' });
   } else {
@@ -366,7 +363,7 @@ function hideDetail() {
   }
 }
 
-// ===== BACK BUTTON CLICK =====
+// ===== BACK BUTTON =====
 backBtn.addEventListener('click', hideDetail);
 
 // ===== LOGO CLICK =====
@@ -380,7 +377,7 @@ logoLink.addEventListener('click', (e) => {
   }
 });
 
-// ===== HASH CHANGE ROUTING =====
+// ===== HASH ROUTING =====
 function handleHashChange() {
   const hash = window.location.hash;
   if (hash.startsWith('#service-')) {
@@ -396,7 +393,6 @@ function handleHashChange() {
       return;
     }
   }
-  // If hash doesn't match any detail, ensure main content is shown
   if (detailSection.classList.contains('active')) {
     hideDetail();
   }
@@ -405,9 +401,10 @@ function handleHashChange() {
 window.addEventListener('hashchange', handleHashChange);
 
 // ===== CLICK HANDLERS =====
-// Services
+// Services – card click
 document.querySelectorAll('.services__card').forEach(card => {
-  card.addEventListener('click', () => {
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('.services__card-btn')) return;
     const serviceId = card.dataset.service;
     if (serviceId && serviceData[serviceId]) {
       window.location.hash = `service-${serviceId}`;
@@ -416,10 +413,35 @@ document.querySelectorAll('.services__card').forEach(card => {
   });
 });
 
-// Clientele (New!)
+// Services – button click
+document.querySelectorAll('.services__card-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const serviceId = btn.dataset.service;
+    if (serviceId && serviceData[serviceId]) {
+      window.location.hash = `service-${serviceId}`;
+      renderDetail(serviceId, 'service');
+    }
+  });
+});
+
+// Clientele – card click
 document.querySelectorAll('.clientele__item').forEach(item => {
-  item.addEventListener('click', () => {
+  item.addEventListener('click', (e) => {
+    if (e.target.closest('.clientele__btn')) return;
     const clientId = item.dataset.client;
+    if (clientId && clienteleData[clientId]) {
+      window.location.hash = `clientele-${clientId}`;
+      renderDetail(clientId, 'clientele');
+    }
+  });
+});
+
+// Clientele – button click
+document.querySelectorAll('.clientele__btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const clientId = btn.dataset.client;
     if (clientId && clienteleData[clientId]) {
       window.location.hash = `clientele-${clientId}`;
       renderDetail(clientId, 'clientele');
@@ -430,7 +452,6 @@ document.querySelectorAll('.clientele__item').forEach(item => {
 // ===== PRELOADER =====
 window.addEventListener('load', () => {
   document.getElementById('preloader').classList.add('hidden');
-  // Check initial hash
   if (window.location.hash) {
     handleHashChange();
   }
@@ -450,15 +471,13 @@ window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 80);
 });
 
-// ============================================================
-// ===== ACTIVE NAV LINK ON SCROLL (NEW) =====
-// ============================================================
+// ===== ACTIVE NAV LINK =====
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav__link');
 
 function updateActiveLink() {
   let current = '';
-  const scrollPosition = window.scrollY + 100; // Offset for fixed header
+  const scrollPosition = window.scrollY + 100;
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
@@ -476,10 +495,7 @@ function updateActiveLink() {
   });
 }
 
-// Call on scroll (combine with existing scroll listeners)
 window.addEventListener('scroll', updateActiveLink);
-
-// Call on load and hash change
 window.addEventListener('load', updateActiveLink);
 window.addEventListener('hashchange', updateActiveLink);
 
@@ -561,31 +577,56 @@ setInterval(() => {
   showSlide(currentSlide);
 }, 5000);
 
-// ===== COUNTERS =====
-const counters = document.querySelectorAll('.hero__stat-number');
-const counterObserver = new IntersectionObserver((entries) => {
+// ===== ENHANCED COUNTER WITH SMOOTH ANIMATION =====
+function animateCounter(element, target, duration = 2500) {
+  const start = 0;
+  const startTime = performance.now();
+
+  function updateCounter(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(eased * target);
+    element.textContent = current + '+';
+    if (progress < 1) {
+      requestAnimationFrame(updateCounter);
+    } else {
+      element.textContent = target + '+';
+    }
+  }
+  requestAnimationFrame(updateCounter);
+}
+
+const counterObserverNew = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const target = entry.target;
       const count = parseInt(target.dataset.count);
-      let current = 0;
-      const increment = Math.ceil(count / 50);
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= count) {
-          target.textContent = count + '+';
-          clearInterval(timer);
-        } else {
-          target.textContent = current + '+';
-        }
-      }, 25);
-      counterObserver.unobserve(target);
+      animateCounter(target, count, 2500);
+      counterObserverNew.unobserve(target);
     }
   });
 }, { threshold: 0.5 });
-counters.forEach(c => counterObserver.observe(c));
 
-// ===== SCROLL REVEAL =====
+document.querySelectorAll('.hero__stat-number').forEach(c => {
+  counterObserverNew.observe(c);
+});
+
+// ===== SCROLL REVEAL (Section fade-in) =====
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('section-visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.about, .services, .clientele, .testimonials, .contact').forEach(section => {
+  section.classList.add('section-hidden');
+  sectionObserver.observe(section);
+});
+
+// ===== SERVICE CARD REVEAL (Staggered) =====
 const serviceCards = document.querySelectorAll('.services__card');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, index) => {
@@ -633,6 +674,89 @@ document.querySelectorAll('.services__card, .clientele__item').forEach(el => {
   });
 });
 
+// ===== PARALLAX ON HERO =====
+window.addEventListener('scroll', function() {
+  const scrollY = window.scrollY;
+  const heroSlides = document.querySelectorAll('.hero__slide');
+  if (heroSlides.length > 0 && scrollY < window.innerHeight) {
+    const offset = scrollY * 0.15;
+    heroSlides.forEach(slide => {
+      slide.style.transform = `translateY(${offset * 0.3}px) scale(1.05)`;
+    });
+  }
+});
+
+// ===== FLOATING CTA HIDE/SHOW ON SCROLL =====
+let lastScrollY = window.scrollY;
+const cta = document.getElementById('floatingCta');
+
+window.addEventListener('scroll', function() {
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > lastScrollY && currentScrollY > 300) {
+    cta.style.transform = 'translateY(80px)';
+    cta.style.opacity = '0';
+  } else {
+    cta.style.transform = 'translateY(0)';
+    cta.style.opacity = '1';
+  }
+  lastScrollY = currentScrollY;
+});
+
+// ===== SMOOTH SCROLL FOR FLOATING CTA =====
+if (cta) {
+  cta.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const offset = 80;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+}
+
+// ===== TESTIMONIALS AUTO-SCROLL (Mobile) =====
+const testimonialCards = document.querySelectorAll('.testimonial__card');
+if (window.innerWidth <= 768 && testimonialCards.length > 1) {
+  let testimonialIndex = 0;
+  testimonialCards.forEach((card, i) => {
+    if (i !== 0) card.style.display = 'none';
+  });
+  setInterval(() => {
+    testimonialIndex = (testimonialIndex + 1) % testimonialCards.length;
+    testimonialCards.forEach((card, i) => {
+      card.style.display = i === testimonialIndex ? 'block' : 'none';
+    });
+  }, 5000);
+}
+
+// ===== KEYBOARD SUPPORT =====
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && detailSection.classList.contains('active')) {
+    hideDetail();
+  }
+});
+
+// ===== LAZY LOAD IMAGES =====
+document.addEventListener('DOMContentLoaded', function() {
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.classList.add('loaded');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    lazyImages.forEach(img => {
+      img.classList.add('lazy');
+      imageObserver.observe(img);
+    });
+  }
+});
+
 // ===== TOAST =====
 function showToast(message, type = 'success') {
   const container = document.getElementById('toastContainer');
@@ -649,9 +773,6 @@ function showToast(message, type = 'success') {
 
 // ===== CONTACT FORM =====
 const form = document.getElementById('contactForm');
-const status = document.getElementById('formStatus');
-
-// Service labels for readable output
 const serviceLabels = {
   'vehicle-branding': 'Vehicle Branding',
   'shop-branding': 'Shop Branding',
@@ -674,7 +795,6 @@ form.addEventListener('submit', (e) => {
   const service = document.getElementById('service').value;
   const message = document.getElementById('message').value.trim();
 
-  // Validation
   if (!name || !email || !service || !message) {
     showToast('Please fill in all required fields.', 'error');
     return;
@@ -687,7 +807,6 @@ form.addEventListener('submit', (e) => {
 
   const serviceName = serviceLabels[service] || service;
 
-  // Log the full message (replace with API call later)
   console.log('=== New Inquiry ===');
   console.log(`Name: ${name}`);
   console.log(`Email: ${email}`);
@@ -716,77 +835,105 @@ scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ===== SERVICE CARD & BUTTON CLICK HANDLERS =====
-// Handle card click (entire card)
-document.querySelectorAll('.services__card').forEach(card => {
-  card.addEventListener('click', (e) => {
-    // If the click target is the button itself, let the button handler take over
-    if (e.target.closest('.services__card-btn')) return;
-    
-    const serviceId = card.dataset.service;
-    if (serviceId && serviceData[serviceId]) {
-      window.location.hash = `service-${serviceId}`;
-      renderDetail(serviceId, 'service');
+// ===== COOKIE CONSENT =====
+const CONSENT_COOKIE = 'cookie_consent';
+
+function setCookie(name, value, days = 365) {
+  const expiry = new Date();
+  expiry.setDate(expiry.getDate() + days);
+  document.cookie = `${name}=${value}; expires=${expiry.toUTCString()}; path=/; SameSite=Lax; Secure`;
+}
+
+function getCookie(name) {
+  const decoded = decodeURIComponent(document.cookie);
+  const arr = decoded.split('; ');
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].indexOf(`${name}=`) === 0) {
+      return arr[i].substring(name.length + 1);
     }
-  });
-});
+  }
+  return null;
+}
 
-// Handle button click (separate, with stopPropagation to avoid double-trigger)
-document.querySelectorAll('.services__card-btn').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation(); // Prevent card click from firing
-    const serviceId = btn.dataset.service;
-    if (serviceId && serviceData[serviceId]) {
-      window.location.hash = `service-${serviceId}`;
-      renderDetail(serviceId, 'service');
-    }
-  });
-});
+function deleteCookie(name) {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+}
 
-// ===== CLIENTELE CLICK HANDLERS =====
-// Card click (entire card)
-document.querySelectorAll('.clientele__item').forEach(item => {
-  item.addEventListener('click', (e) => {
-    // If the click is on the button itself, let the button handler take over
-    if (e.target.closest('.clientele__btn')) return;
+function getConsentStatus() {
+  const cookieVal = getCookie(CONSENT_COOKIE);
+  if (cookieVal) return cookieVal;
+  const localVal = localStorage.getItem(CONSENT_COOKIE);
+  if (localVal) {
+    setCookie(CONSENT_COOKIE, localVal);
+    return localVal;
+  }
+  return null;
+}
 
-    const clientId = item.dataset.client;
-    if (clientId && clienteleData[clientId]) {
-      window.location.hash = `clientele-${clientId}`;
-      renderDetail(clientId, 'clientele');
-    }
-  });
-});
+function saveConsent(status) {
+  setCookie(CONSENT_COOKIE, status);
+  localStorage.setItem(CONSENT_COOKIE, status);
+}
 
-// Button click (separate, prevents double-trigger)
-document.querySelectorAll('.clientele__btn').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation(); // Prevent card click from firing
-    const clientId = btn.dataset.client;
-    if (clientId && clienteleData[clientId]) {
-      window.location.hash = `clientele-${clientId}`;
-      renderDetail(clientId, 'clientele');
-    }
-  });
-});
+function acceptAll() {
+  saveConsent('accepted');
+  document.getElementById('cookieBanner').classList.remove('active');
+  console.log('✅ Cookies accepted.');
+  if (typeof showToast === 'function') {
+    showToast('✅ Cookies accepted.', 'success');
+  }
+}
 
-// ===== COOKIE PREFERENCES - NO RELOAD =====
+function decline() {
+  saveConsent('declined');
+  document.getElementById('cookieBanner').classList.remove('active');
+  console.log('❌ Cookies declined.');
+  if (typeof showToast === 'function') {
+    showToast('Cookies declined.', 'success');
+  }
+}
+
+function showBanner() {
+  setTimeout(() => {
+    document.getElementById('cookieBanner').classList.add('active');
+  }, 800);
+}
+
+function revokeConsent() {
+  deleteCookie(CONSENT_COOKIE);
+  localStorage.removeItem(CONSENT_COOKIE);
+  showBanner();
+  console.log('🔄 Consent revoked.');
+}
+
+const consentStatus = getConsentStatus();
+if (!consentStatus) {
+  showBanner();
+} else if (consentStatus === 'accepted') {
+  console.log('🔁 Consent already accepted.');
+} else {
+  console.log('🚫 Consent declined.');
+}
+
+document.getElementById('cookieAccept').addEventListener('click', acceptAll);
+document.getElementById('cookieDecline').addEventListener('click', decline);
+
 const preferencesLink = document.getElementById('cookiePreferencesLink');
-
 if (preferencesLink) {
   preferencesLink.addEventListener('click', function(e) {
-    e.preventDefault(); // Prevent any default behavior
-    e.stopPropagation(); // Stop event bubbling
-
-    // Revoke consent
+    e.preventDefault();
+    e.stopPropagation();
     revokeConsent();
-
-    // Show a confirmation toast (optional)
     if (typeof showToast === 'function') {
       showToast('Cookie preferences reset. Please make your choice.', 'success');
     }
-
-    // Smooth scroll to top so user sees the banner
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+document.getElementById('cookieLearnMore').addEventListener('click', function(e) {
+  e.preventDefault();
+  if (typeof showToast === 'function') {
+    showToast('Privacy Policy: We use cookies to improve your experience.', 'success');
+  }
+});
