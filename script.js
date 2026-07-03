@@ -146,7 +146,7 @@ const serviceData = {
   }
 };
 
-// ===== CLIENTELE DATA =====
+// ===== CLIENTELE DATA (New!) =====
 const clienteleData = {
   'sunking': {
     title: 'Sunking',
@@ -165,35 +165,35 @@ const clienteleData = {
     ]
   },
   'world-vision': {
-    title: 'World Vision',
-    description: 'World Vision started in 1974 and has grown in Kenya, helping children and communities in 37 out of 47 counties.',
-    heroImage: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=80',
+    title: 'SimpliDelivered',
+    description: 'SimpliDelivered promises "Goodness Guaranteed". We helped them build a cohesive brand identity that emphasizes reliability, freshness, and customer trust across their delivery network.',
+    heroImage: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80',
     stats: [
-      { number: '20+', label: 'Branding Assets' },
-      { number: '10+', label: 'Campaigns Launched' },
-      { number: '500k+', label: 'People Reached' },
+      { number: '20+', label: 'Branded Vehicles' },
+      { number: '15+', label: 'Storefronts' },
+      { number: '98%', label: 'Brand Recall' },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80',
-      'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=80',
-      'https://images.unsplash.com/photo-1593113630400-ea4288922497?w=600&q=80',
-      'https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?w=600&q=80',
+      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80',
+      'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&q=80',
+      'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80',
+      'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&q=80',
     ]
   },
   'fresh-life': {
     title: 'Fresh Life',
-    description: 'Fresh Life provides clean and safe sanitation solutions across Kenya. We helped them build a brand identity that communicates hygiene, dignity, and innovation.',
-    heroImage: 'https://images.unsplash.com/photo-1532996122725-e3c354a0b15b?w=1200&q=80',
+    description: 'Dimension Data challenged us to brand their corporate environments with a "Let\'s Do More" ethos. We delivered modern, tech-forward office branding that inspires innovation and collaboration.',
+    heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80',
     stats: [
-      { number: '8+', label: 'Campaigns' },
-      { number: '50+', label: 'Installations' },
-      { number: '100%', label: 'Brand Recognition' },
+      { number: '8+', label: 'Offices Branded' },
+      { number: '50+', label: 'Meeting Rooms' },
+      { number: '100%', label: 'Employee Approval' },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1532996122725-e3c354a0b15b?w=600&q=80',
-      'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80',
-      'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=600&q=80',
-      'https://images.unsplash.com/photo-1531834823707-a2f15777c8e7?w=600&q=80',
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80',
+      'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80',
     ]
   },
   'mgas': {
@@ -214,69 +214,69 @@ const clienteleData = {
     ]
   },
   'telkom': {
-    title: 'Telkom',
-    description: "Kenya's leading telecommunications provider trusted by millions. We partnered with Telkom to deliver premium branding solutions across their expansive network and retail presence.",
-    heroImage: 'images/clients/telkom-kenya.webp',
-    stats: [
-      { number: '50+', label: 'Retail Outlets' },
-      { number: '30+', label: 'Branding Projects' },
-      { number: '100%', label: 'Client Satisfaction' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-      'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80',
-    ]
-  },
-  'uip-real-estate': {
-    title: 'UIP Real Estate',
-    description: "Kenya's trusted real estate company. Browse affordable land, residential, commercial & industrial properties.",
-    heroImage: 'images/clients/uip_real_estate.jfif',
-    stats: [
-      { number: '100+', label: 'Branches Branded' },
-      { number: '20+', label: 'Corporate Projects' },
-      { number: '99%', label: 'Quality Rating' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=600&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
-    ]
-  },
-  'rachier-and-amollo': {
-    title: 'Rachier and Amollo LLP',
-    description: 'Nationally recognized, dynamic and result oriented law firm.',
-    heroImage: 'images/clients/rachier_and_amollo.png',
-    stats: [
-      { number: '40+', label: 'Projects Complete' },
-      { number: '15+', label: 'Lounge Projects' },
-      { number: '100%', label: 'Quality Assurance' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80',
-      'https://images.unsplash.com/photo-1542296332-2e4473faf563?w=600&q=80',
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80',
-      'https://images.unsplash.com/photo-1542818219-3daa53ab5d5b?w=600&q=80',
-    ]
-  },
-  'sistema-bio': {
-    title: 'Sistema Bio',
-    description: 'Sistema.bio is a prefabricated modular biodigester package that includes a full suite of biogas appliances and connections.',
-    heroImage: 'images/clients/sistema_bio.png',
-    stats: [
-      { number: '60+', label: 'Retail Activations' },
-      { number: '25+', label: 'Branding Projects' },
-      { number: '98%', label: 'Consumer Engagement' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
-      'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
-      'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
-      'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
-    ]
-  }
+  title: 'Telkom',
+  description: "Kenya's leading telecommunications provider trusted by millions. We partnered with Safaricom to deliver premium branding solutions across their expansive network and retail presence.",
+  heroImage: 'images/clients/telkom-kenya.webp',
+  stats: [
+    { number: '50+', label: 'Retail Outlets' },
+    { number: '30+', label: 'Branding Projects' },
+    { number: '100%', label: 'Client Satisfaction' },
+  ],
+  gallery: [
+    'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80',
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
+    'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+    'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80',
+  ]
+},
+'uip-real-estate': {
+  title: 'UIP Real Estate',
+  description: "Kenya's trusted real estate company. Browse affordable land, residential, commercial & industrial properties.",
+  heroImage: 'images/clients/uip_real_estate.jfif',
+  stats: [
+    { number: '100+', label: 'Branches Branded' },
+    { number: '20+', label: 'Corporate Projects' },
+    { number: '99%', label: 'Quality Rating' },
+  ],
+  gallery: [
+    'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=600&q=80',
+    'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+    'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80',
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
+  ]
+},
+'rachier-and-amollo': {
+  title: 'Rachier and Amollo LLP',
+  description: 'Nationally recognized, dynamic and result oriented law firm.',
+  heroImage: 'images/clients/rachier_and_amollo.png',
+  stats: [
+    { number: '40+', label: 'Projects Complete' },
+    { number: '15+', label: 'Lounge Projects' },
+    { number: '100%', label: 'Quality Assurance' },
+  ],
+  gallery: [
+    'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80',
+    'https://images.unsplash.com/photo-1542296332-2e4473faf563?w=600&q=80',
+    'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80',
+    'https://images.unsplash.com/photo-1542818219-3daa53ab5d5b?w=600&q=80',
+  ]
+},
+'sistema-bio': {
+  title: 'Sistema Bio',
+  description: 'Sistema.bio is a prefabricated modular biodigester package that includes a full suite of biogas appliances and connections',
+  heroImage: 'images/clients/sistema_bio.png',
+  stats: [
+    { number: '60+', label: 'Retail Activations' },
+    { number: '25+', label: 'Branding Projects' },
+    { number: '98%', label: 'Consumer Engagement' },
+  ],
+  gallery: [
+    'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
+    'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
+    'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
+    'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
+  ]
+}
 };
 
 // ===== DOM REFS =====
@@ -449,39 +449,6 @@ const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 80);
 });
-
-// ============================================================
-// ===== ACTIVE NAV LINK ON SCROLL (NEW) =====
-// ============================================================
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav__link');
-
-function updateActiveLink() {
-  let current = '';
-  const scrollPosition = window.scrollY + 100; // Offset for fixed header
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === '#' + current) {
-      link.classList.add('active');
-    }
-  });
-}
-
-// Call on scroll (combine with existing scroll listeners)
-window.addEventListener('scroll', updateActiveLink);
-
-// Call on load and hash change
-window.addEventListener('load', updateActiveLink);
-window.addEventListener('hashchange', updateActiveLink);
 
 // ===== NAV TOGGLE =====
 const navToggle = document.getElementById('navToggle');
@@ -700,7 +667,7 @@ form.addEventListener('submit', (e) => {
 
   setTimeout(() => {
     showToast(
-      `Thank you ${name}! We've received your inquiry about ${serviceName}. We'll get back to you soon.`,
+      `✅ Thank you ${name}! We've received your inquiry about ${serviceName}. We'll get back to you soon.`,
       'success'
     );
     form.reset();
@@ -744,6 +711,17 @@ document.querySelectorAll('.services__card-btn').forEach(btn => {
 });
 
 // ===== CLIENTELE CLICK HANDLERS =====
+document.querySelectorAll('.clientele__item').forEach(item => {
+  item.addEventListener('click', () => {
+    const clientId = item.dataset.client;
+    if (clientId && clienteleData[clientId]) {
+      window.location.hash = `clientele-${clientId}`;
+      renderDetail(clientId, 'clientele');
+    }
+  });
+});
+
+// ===== CLIENTELE CLICK HANDLERS =====
 // Card click (entire card)
 document.querySelectorAll('.clientele__item').forEach(item => {
   item.addEventListener('click', (e) => {
@@ -770,6 +748,8 @@ document.querySelectorAll('.clientele__btn').forEach(btn => {
   });
 });
 
+
+// Cookies
 // ===== COOKIE PREFERENCES - NO RELOAD =====
 const preferencesLink = document.getElementById('cookiePreferencesLink');
 
@@ -783,10 +763,11 @@ if (preferencesLink) {
 
     // Show a confirmation toast (optional)
     if (typeof showToast === 'function') {
-      showToast('Cookie preferences reset. Please make your choice.', 'success');
+      showToast('🍪 Cookie preferences reset. Please make your choice.', 'success');
     }
 
     // Smooth scroll to top so user sees the banner
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
