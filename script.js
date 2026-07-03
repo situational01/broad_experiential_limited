@@ -721,3 +721,29 @@ document.querySelectorAll('.clientele__item').forEach(item => {
   });
 });
 
+// ===== CLIENTELE CLICK HANDLERS =====
+// Card click (entire card)
+document.querySelectorAll('.clientele__item').forEach(item => {
+  item.addEventListener('click', (e) => {
+    // If the click is on the button itself, let the button handler take over
+    if (e.target.closest('.clientele__btn')) return;
+
+    const clientId = item.dataset.client;
+    if (clientId && clienteleData[clientId]) {
+      window.location.hash = `clientele-${clientId}`;
+      renderDetail(clientId, 'clientele');
+    }
+  });
+});
+
+// Button click (separate, prevents double-trigger)
+document.querySelectorAll('.clientele__btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent card click from firing
+    const clientId = btn.dataset.client;
+    if (clientId && clienteleData[clientId]) {
+      window.location.hash = `clientele-${clientId}`;
+      renderDetail(clientId, 'clientele');
+    }
+  });
+});

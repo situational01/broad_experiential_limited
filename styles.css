@@ -2581,3 +2581,252 @@ body.detail-active .scroll-top {
     font-size: 0.9rem;
   }
 }
+
+/* ============================================================
+   CLIENTELE - WITH VIEW WORK BUTTON
+   ============================================================ */
+.clientele {
+  padding: 5rem 0;
+  background: var(--light-bg);
+}
+
+.clientele__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.clientele__item {
+  position: relative;
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.clientele__item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--border);
+}
+
+/* ---- Card Content ---- */
+.clientele__card-content {
+  padding: 2rem 1rem 1.5rem;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clientele__card-content img {
+  width: 100px;
+  height: 70px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.clientele__item:hover .clientele__card-content img {
+  filter: grayscale(0%);
+}
+
+.clientele__card-content span {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: block;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+
+.clientele__tagline {
+  color: var(--gray);
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.4;
+  max-width: 95%;
+}
+
+/* ---- Overlay with Button (appears on hover) ---- */
+.clientele__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 44, 76, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 1.5rem;
+}
+
+.clientele__item:hover .clientele__overlay {
+  opacity: 1;
+}
+
+/* ---- View Work Button ---- */
+.clientele__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 86, 179, 0.35);
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, background 0.3s ease;
+}
+
+.clientele__item:hover .clientele__btn {
+  transform: translateY(0);
+}
+
+.clientele__btn:hover {
+  background: #fff;
+  color: var(--primary);
+  transform: translateX(5px) !important;
+  box-shadow: 0 8px 30px rgba(0, 86, 179, 0.45);
+}
+
+.clientele__btn i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.clientele__btn:hover i {
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablets & Small Laptops */
+@media (max-width: 992px) {
+  .clientele__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .clientele {
+    padding: 3rem 0;
+  }
+
+  .clientele__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .clientele__card-content {
+    padding: 1.5rem 0.8rem 1rem;
+  }
+
+  .clientele__card-content img {
+    width: 70px;
+    height: 50px;
+  }
+
+  .clientele__card-content span {
+    font-size: 0.95rem;
+  }
+
+  .clientele__tagline {
+    font-size: 0.75rem;
+  }
+
+  /* On mobile, always show the button (no hover needed) */
+  .clientele__overlay {
+    position: relative;
+    background: transparent;
+    backdrop-filter: none;
+    opacity: 1;
+    padding: 0 0 1.2rem 0;
+  }
+
+  .clientele__item:hover .clientele__overlay {
+    opacity: 1;
+  }
+
+  .clientele__btn {
+    background: var(--secondary);
+    color: #fff;
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 86, 179, 0.3);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .clientele__item:hover .clientele__btn {
+    transform: translateY(0);
+  }
+
+  .clientele__btn:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateX(0) !important;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .clientele__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .clientele__card-content {
+    padding: 1rem 0.5rem 0.8rem;
+  }
+
+  .clientele__card-content img {
+    width: 60px;
+    height: 45px;
+    margin-bottom: 0.5rem;
+  }
+
+  .clientele__card-content span {
+    font-size: 0.85rem;
+  }
+
+  .clientele__tagline {
+    font-size: 0.7rem;
+  }
+
+  .clientele__btn {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 400px) {
+  .clientele__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .clientele__card-content img {
+    width: 50px;
+    height: 40px;
+  }
+}
