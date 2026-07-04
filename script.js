@@ -39,7 +39,7 @@ const serviceData = {
     stats: [
       { number: '200+', label: 'Signs Installed' },
       { number: '50+', label: 'Corporate Clients' },
-      { number: '99%', label: 'On-Time Delivery' },
+      { number: '100%', label: 'On-Time Delivery' },
     ],
     gallery: [
       'https://images.unsplash.com/photo-1553531384-cc0ac1ae1f0d?w=600&q=80',
@@ -71,7 +71,7 @@ const serviceData = {
     stats: [
       { number: '40+', label: 'Offices Branded' },
       { number: '25+', label: 'Corporate Clients' },
-      { number: '98%', label: 'Employee Satisfaction' },
+      { number: '100%', label: 'Employee Satisfaction' },
     ],
     gallery: [
       'images/slide_1.jpg',
@@ -87,7 +87,7 @@ const serviceData = {
     stats: [
       { number: '1M+', label: 'Prints Delivered' },
       { number: '100+', label: 'Design Projects' },
-      { number: '99.9%', label: 'Quality Accuracy' },
+      { number: '100%', label: 'Quality Accuracy' },
     ],
     gallery: [
       'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=600&q=80',
@@ -119,7 +119,7 @@ const serviceData = {
     stats: [
       { number: '80+', label: 'Events Executed' },
       { number: '50k+', label: 'People Reached' },
-      { number: '4.9/5', label: 'Client Rating' },
+      { number: '5/5', label: 'Client Rating' },
     ],
     gallery: [
       'https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600&q=80',
