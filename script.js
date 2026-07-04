@@ -39,7 +39,7 @@ const serviceData = {
     stats: [
       { number: '200+', label: 'Signs Installed' },
       { number: '50+', label: 'Corporate Clients' },
-      { number: '100%', label: 'On-Time Delivery' },
+      { number: '99%', label: 'On-Time Delivery' },
     ],
     gallery: [
       'https://images.unsplash.com/photo-1553531384-cc0ac1ae1f0d?w=600&q=80',
@@ -512,26 +512,6 @@ document.querySelectorAll('.nav__link').forEach(link => {
     navToggle.classList.remove('open');
   });
 });
-
-// ===== THEME TOGGLE =====
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = document.getElementById('themeIcon');
-const htmlRoot = document.getElementById('htmlRoot');
-const savedTheme = localStorage.getItem('theme') || 'dark';
-htmlRoot.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
-
-themeToggle.addEventListener('click', () => {
-  const current = htmlRoot.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  htmlRoot.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-  updateThemeIcon(next);
-});
-
-function updateThemeIcon(theme) {
-  themeIcon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-}
 
 // ===== TYPING =====
 const typedElement = document.getElementById('typedText');
