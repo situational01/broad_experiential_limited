@@ -872,16 +872,16 @@ function saveConsent(status) {
 function acceptAll() {
   saveConsent('accepted');
   document.getElementById('cookieBanner').classList.remove('active');
-  console.log('✅ Cookies accepted.');
+  console.log(' Cookies accepted.');
   if (typeof showToast === 'function') {
-    showToast('✅ Cookies accepted.', 'success');
+    showToast(' Cookies accepted.', 'success');
   }
 }
 
 function decline() {
   saveConsent('declined');
   document.getElementById('cookieBanner').classList.remove('active');
-  console.log('❌ Cookies declined.');
+  console.log(' Cookies declined.');
   if (typeof showToast === 'function') {
     showToast('Cookies declined.', 'success');
   }
@@ -897,16 +897,16 @@ function revokeConsent() {
   deleteCookie(CONSENT_COOKIE);
   localStorage.removeItem(CONSENT_COOKIE);
   showBanner();
-  console.log('🔄 Consent revoked.');
+  console.log(' Consent revoked.');
 }
 
 const consentStatus = getConsentStatus();
 if (!consentStatus) {
   showBanner();
 } else if (consentStatus === 'accepted') {
-  console.log('🔁 Consent already accepted.');
+  console.log(' Consent already accepted.');
 } else {
-  console.log('🚫 Consent declined.');
+  console.log(' Consent declined.');
 }
 
 document.getElementById('cookieAccept').addEventListener('click', acceptAll);
