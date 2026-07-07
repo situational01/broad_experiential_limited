@@ -2627,3 +2627,158 @@ select:focus-visible {
     height: 36px;
   }
 }
+
+/* ===== ABOUT CARDS ===== */
+.about__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.about__card {
+  background: var(--color-card-bg);
+  padding: 1.5rem 1.2rem;
+  border-radius: var(--radius-sm);
+  border-top: 4px solid var(--color-secondary);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+}
+
+.about__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.about__card h3 {
+  font-size: 1.05rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+  margin-bottom: 0.3rem;
+}
+
+.about__card p {
+  font-size: 0.88rem;
+  color: var(--color-gray);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 95%;
+}
+
+/* Card Color Accents */
+.about__card--vision {
+  border-top-color: var(--color-secondary);
+}
+.about__card--mission {
+  border-top-color: var(--color-primary);
+}
+.about__card--values {
+  border-top-color: var(--color-primary);
+}
+
+/* ============================================================
+   RESPONSIVE - ABOUT CARDS
+   ============================================================ */
+
+/* Tablets & small laptops */
+@media (max-width: 992px) {
+  .about__cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .about__card {
+    padding: 1.2rem 0.8rem;
+    min-height: 120px;
+  }
+
+  .about__card h3 {
+    font-size: 0.95rem;
+  }
+
+  .about__card p {
+    font-size: 0.82rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about__cards {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .about__card {
+    padding: 1.2rem 1.5rem;
+    min-height: auto;
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    border-top: none;
+    border-left: 4px solid var(--color-secondary);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .about__card--vision {
+    border-left-color: var(--color-secondary);
+    border-top: none;
+  }
+  .about__card--mission {
+    border-left-color: var(--color-primary);
+    border-top: none;
+  }
+  .about__card--values {
+    border-left-color: var(--color-primary);
+    border-top: none;
+  }
+
+  .about__card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+    flex-shrink: 0;
+  }
+
+  .about__card p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  /* Optional: add a small icon or marker for visual interest */
+  .about__card::before {
+    content: '';
+    width: 4px;
+    height: 40px;
+    background: var(--color-secondary);
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: none;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .about__card {
+    padding: 1rem 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    border-left-width: 4px;
+  }
+
+  .about__card h3 {
+    font-size: 0.95rem;
+  }
+
+  .about__card p {
+    font-size: 0.82rem;
+  }
+}
