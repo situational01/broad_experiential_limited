@@ -14,19 +14,21 @@ const serviceData = {
       'images/car_branding/carbranding4.jpg',
       'images/car_branding/carbranding5.jpg',
       'images/car_branding/carbranding6.jpg',
+      'images/car_branding/WhatsApp Image 2026-07-06 at 9.13.01 PM.jpeg',
+      'images/car_branding/WhatsApp Image 2026-07-06 at 9.13.00 PM (1).jpeg',
     ]
   },
   'shop-branding': {
     title: 'Shop Branding',
     description: 'Transform your retail space into an immersive brand experience. From storefronts to interiors, we create environments that attract and retain customers.',
-    heroImage: 'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=1200&q=80',
+    heroImage: 'images/shop_branding/sunking_shopbranding.jfif',
     stats: [
       { number: '30+', label: 'Shops Transformed' },
       { number: '20+', label: 'Retail Partners' },
       { number: '95%', label: 'Client Retention' },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&q=80',
+      'images/The convenient way of cooking is to get yourselves connected na MGAS. Eldoret depot on to the next site(WEBP).webp',
       'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80',
       'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600&q=80',
       'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80',
