@@ -162,7 +162,6 @@ const serviceData = {
   }
 };
 
-// ===== CLIENTELE DATA =====
 const clienteleData = {
   'sunking': {
     title: 'Sunking',
@@ -305,11 +304,9 @@ const backBtn = document.getElementById('detailBackBtn');
 
 let returnSectionId = '#services';
 
-// ===== RENDER DETAIL VIEW =====
 function renderDetail(id, type) {
   let data;
   let backSection = '#services';
-
   if (type === 'clientele') {
     data = clienteleData[id];
     backSection = '#clientele';
@@ -317,12 +314,10 @@ function renderDetail(id, type) {
     data = serviceData[id];
     backSection = '#services';
   }
-
   if (!data) {
     console.warn('No data found for:', id);
     return;
   }
-
   returnSectionId = backSection;
 
   const statsHTML = data.stats.map(stat =>
@@ -359,16 +354,13 @@ function renderDetail(id, type) {
   window.scrollTo(0, 0);
 }
 
-// ===== HIDE DETAIL VIEW =====
 function hideDetail() {
   detailSection.classList.remove('active');
   mainContent.style.display = 'block';
   body.classList.remove('detail-active');
-
   if (window.location.hash) {
     history.pushState(null, null, ' ');
   }
-
   const targetElement = document.querySelector(returnSectionId);
   if (targetElement) {
     const offset = 80;
@@ -379,10 +371,8 @@ function hideDetail() {
   }
 }
 
-// ===== BACK BUTTON =====
 backBtn.addEventListener('click', hideDetail);
 
-// ===== LOGO CLICK =====
 logoLink.addEventListener('click', (e) => {
   e.preventDefault();
   if (detailSection.classList.contains('active')) {
@@ -413,11 +403,9 @@ function handleHashChange() {
     hideDetail();
   }
 }
-
 window.addEventListener('hashchange', handleHashChange);
 
 // ===== CLICK HANDLERS =====
-// Services – card click
 document.querySelectorAll('.services__card').forEach(card => {
   card.addEventListener('click', (e) => {
     if (e.target.closest('.services__card-btn')) return;
@@ -428,8 +416,6 @@ document.querySelectorAll('.services__card').forEach(card => {
     }
   });
 });
-
-// Services – button click
 document.querySelectorAll('.services__card-btn').forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -440,8 +426,6 @@ document.querySelectorAll('.services__card-btn').forEach(btn => {
     }
   });
 });
-
-// Clientele – card click
 document.querySelectorAll('.clientele__item').forEach(item => {
   item.addEventListener('click', (e) => {
     if (e.target.closest('.clientele__btn')) return;
@@ -452,8 +436,6 @@ document.querySelectorAll('.clientele__item').forEach(item => {
     }
   });
 });
-
-// Clientele – button click
 document.querySelectorAll('.clientele__btn').forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -490,11 +472,9 @@ window.addEventListener('scroll', () => {
 // ===== ACTIVE NAV LINK =====
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav__link');
-
 function updateActiveLink() {
   let current = '';
   const scrollPosition = window.scrollY + 100;
-
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
@@ -502,7 +482,6 @@ function updateActiveLink() {
       current = section.getAttribute('id');
     }
   });
-
   navLinks.forEach(link => {
     link.classList.remove('active');
     if (link.getAttribute('href') === '#' + current) {
@@ -510,7 +489,6 @@ function updateActiveLink() {
     }
   });
 }
-
 window.addEventListener('scroll', updateActiveLink);
 window.addEventListener('load', updateActiveLink);
 window.addEventListener('hashchange', updateActiveLink);
@@ -519,45 +497,22 @@ window.addEventListener('hashchange', updateActiveLink);
 const navToggle = document.getElementById('navToggle');
 const navList = document.querySelector('.nav__list');
 navToggle.addEventListener('click', () => {
-  navList.classList.toggle('open');
+  const isOpen = navList.classList.toggle('open');
   navToggle.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen);
 });
 document.querySelectorAll('.nav__link').forEach(link => {
   link.addEventListener('click', () => {
     navList.classList.remove('open');
     navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
   });
 });
-
-// ===== TYPING =====
-const typedElement = document.getElementById('typedText');
-const words = ['Experiential Marketing Agency', 'Out of Home Experts', 'Branding Solution Providers'];
-let wordIndex = 0, charIndex = 0, isDeleting = false, typingSpeed = 100;
-
-function typeEffect() {
-  const currentWord = words[wordIndex];
-  if (isDeleting) {
-    typedElement.textContent = currentWord.substring(0, charIndex - 1);
-    charIndex--;
-    typingSpeed = 50;
-  } else {
-    typedElement.textContent = currentWord.substring(0, charIndex + 1);
-    charIndex++;
-    typingSpeed = 120;
-  }
-  if (!isDeleting && charIndex === currentWord.length) { isDeleting = true;
-    typingSpeed = 2000; } else if (isDeleting && charIndex === 0) { isDeleting = false;
-    wordIndex = (wordIndex + 1) % words.length;
-    typingSpeed = 500; }
-  setTimeout(typeEffect, typingSpeed);
-}
-typeEffect();
 
 // ===== CAROUSEL =====
 let currentSlide = 0;
 const slides = document.querySelectorAll('.hero__slide');
 const dots = document.querySelectorAll('.hero__dots .dot');
-
 function showSlide(index) {
   slides.forEach((s, i) => s.classList.toggle('active', i === index));
   dots.forEach((d, i) => d.classList.toggle('active', i === index));
@@ -573,11 +528,10 @@ setInterval(() => {
   showSlide(currentSlide);
 }, 5000);
 
-// ===== ENHANCED COUNTER WITH SMOOTH ANIMATION =====
+// ===== COUNTER ANIMATION =====
 function animateCounter(element, target, duration = 2500) {
   const start = 0;
   const startTime = performance.now();
-
   function updateCounter(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
@@ -592,23 +546,21 @@ function animateCounter(element, target, duration = 2500) {
   }
   requestAnimationFrame(updateCounter);
 }
-
-const counterObserverNew = new IntersectionObserver((entries) => {
+const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const target = entry.target;
       const count = parseInt(target.dataset.count);
       animateCounter(target, count, 2500);
-      counterObserverNew.unobserve(target);
+      counterObserver.unobserve(target);
     }
   });
 }, { threshold: 0.5 });
-
-document.querySelectorAll('.hero__stat-number').forEach(c => {
-  counterObserverNew.observe(c);
+document.querySelectorAll('.about__stat-number').forEach(c => {
+  counterObserver.observe(c);
 });
 
-// ===== SCROLL REVEAL (Section fade-in) =====
+// ===== SCROLL REVEAL =====
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -616,13 +568,12 @@ const sectionObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.about, .services, .clientele, .testimonials, .contact').forEach(section => {
   section.classList.add('section-hidden');
   sectionObserver.observe(section);
 });
 
-// ===== SERVICE CARD REVEAL (Staggered) =====
+// ===== SERVICE CARD STAGGER =====
 const serviceCards = document.querySelectorAll('.services__card');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, index) => {
@@ -670,7 +621,7 @@ document.querySelectorAll('.services__card, .clientele__item').forEach(el => {
   });
 });
 
-// ===== PARALLAX ON HERO =====
+// ===== PARALLAX HERO =====
 window.addEventListener('scroll', function() {
   const scrollY = window.scrollY;
   const heroSlides = document.querySelectorAll('.hero__slide');
@@ -682,10 +633,9 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// ===== FLOATING CTA HIDE/SHOW ON SCROLL =====
+// ===== FLOATING CTA =====
 let lastScrollY = window.scrollY;
 const cta = document.getElementById('floatingCta');
-
 window.addEventListener('scroll', function() {
   const currentScrollY = window.scrollY;
   if (currentScrollY > lastScrollY && currentScrollY > 300) {
@@ -697,59 +647,13 @@ window.addEventListener('scroll', function() {
   }
   lastScrollY = currentScrollY;
 });
-
-// ===== SMOOTH SCROLL FOR FLOATING CTA =====
-if (cta) {
-  cta.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      const offset = 80;
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-    }
-  });
-}
-
-// ===== TESTIMONIALS AUTO-SCROLL (Mobile) =====
-const testimonialCards = document.querySelectorAll('.testimonial__card');
-if (window.innerWidth <= 768 && testimonialCards.length > 1) {
-  let testimonialIndex = 0;
-  testimonialCards.forEach((card, i) => {
-    if (i !== 0) card.style.display = 'none';
-  });
-  setInterval(() => {
-    testimonialIndex = (testimonialIndex + 1) % testimonialCards.length;
-    testimonialCards.forEach((card, i) => {
-      card.style.display = i === testimonialIndex ? 'block' : 'none';
-    });
-  }, 5000);
-}
-
-// ===== KEYBOARD SUPPORT =====
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && detailSection.classList.contains('active')) {
-    hideDetail();
-  }
-});
-
-// ===== LAZY LOAD IMAGES =====
-document.addEventListener('DOMContentLoaded', function() {
-  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-  if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.classList.add('loaded');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-    lazyImages.forEach(img => {
-      img.classList.add('lazy');
-      imageObserver.observe(img);
-    });
+cta.addEventListener('click', function(e) {
+  e.preventDefault();
+  const target = document.querySelector(this.getAttribute('href'));
+  if (target) {
+    const offset = 80;
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
   }
 });
 
@@ -781,10 +685,8 @@ const serviceLabels = {
   'branding-strategy': 'Branding Strategy',
   'general-inquiry': 'General Inquiry'
 };
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
@@ -795,29 +697,15 @@ form.addEventListener('submit', (e) => {
     showToast('Please fill in all required fields.', 'error');
     return;
   }
-
   if (!email.includes('@') || !email.includes('.')) {
     showToast('Please enter a valid email address.', 'error');
     return;
   }
-
   const serviceName = serviceLabels[service] || service;
-
-  console.log('=== New Inquiry ===');
-  console.log(`Name: ${name}`);
-  console.log(`Email: ${email}`);
-  console.log(`Phone: ${phone || 'Not provided'}`);
-  console.log(`Service: ${serviceName}`);
-  console.log(`Message: ${message}`);
-  console.log('===================');
-
+  console.log(`=== New Inquiry ===\nName: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nService: ${serviceName}\nMessage: ${message}`);
   showToast('Sending your message...', 'success');
-
   setTimeout(() => {
-    showToast(
-      `Thank you ${name}! We've received your inquiry about ${serviceName}. We'll get back to you soon.`,
-      'success'
-    );
+    showToast(`Thank you ${name}! We've received your inquiry about ${serviceName}. We'll get back to you soon.`, 'success');
     form.reset();
   }, 1500);
 });
@@ -833,13 +721,11 @@ scrollTopBtn.addEventListener('click', () => {
 
 // ===== COOKIE CONSENT =====
 const CONSENT_COOKIE = 'cookie_consent';
-
 function setCookie(name, value, days = 365) {
   const expiry = new Date();
   expiry.setDate(expiry.getDate() + days);
   document.cookie = `${name}=${value}; expires=${expiry.toUTCString()}; path=/; SameSite=Lax; Secure`;
 }
-
 function getCookie(name) {
   const decoded = decodeURIComponent(document.cookie);
   const arr = decoded.split('; ');
@@ -850,11 +736,9 @@ function getCookie(name) {
   }
   return null;
 }
-
 function deleteCookie(name) {
   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 }
-
 function getConsentStatus() {
   const cookieVal = getCookie(CONSENT_COOKIE);
   if (cookieVal) return cookieVal;
@@ -865,80 +749,51 @@ function getConsentStatus() {
   }
   return null;
 }
-
 function saveConsent(status) {
   setCookie(CONSENT_COOKIE, status);
   localStorage.setItem(CONSENT_COOKIE, status);
 }
-
 function acceptAll() {
   saveConsent('accepted');
   document.getElementById('cookieBanner').classList.remove('active');
-  console.log(' Cookies accepted.');
-  if (typeof showToast === 'function') {
-    showToast(' Cookies accepted.', 'success');
-  }
+  showToast('Cookies accepted.', 'success');
 }
-
 function decline() {
   saveConsent('declined');
   document.getElementById('cookieBanner').classList.remove('active');
-  console.log(' Cookies declined.');
-  if (typeof showToast === 'function') {
-    showToast('Cookies declined.', 'success');
-  }
+  showToast('Cookies declined.', 'success');
 }
-
 function showBanner() {
   setTimeout(() => {
     document.getElementById('cookieBanner').classList.add('active');
   }, 800);
 }
-
-function revokeConsent() {
-  deleteCookie(CONSENT_COOKIE);
-  localStorage.removeItem(CONSENT_COOKIE);
-  showBanner();
-  console.log(' Consent revoked.');
-}
-
 const consentStatus = getConsentStatus();
 if (!consentStatus) {
   showBanner();
-} else if (consentStatus === 'accepted') {
-  console.log(' Consent already accepted.');
-} else {
-  console.log(' Consent declined.');
 }
-
 document.getElementById('cookieAccept').addEventListener('click', acceptAll);
 document.getElementById('cookieDecline').addEventListener('click', decline);
-
 const preferencesLink = document.getElementById('cookiePreferencesLink');
 if (preferencesLink) {
   preferencesLink.addEventListener('click', function(e) {
     e.preventDefault();
-    e.stopPropagation();
-    revokeConsent();
-    if (typeof showToast === 'function') {
-      showToast('Cookie preferences reset. Please make your choice.', 'success');
-    }
+    deleteCookie(CONSENT_COOKIE);
+    localStorage.removeItem(CONSENT_COOKIE);
+    showBanner();
+    showToast('Cookie preferences reset. Please make your choice.', 'success');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
-
 document.getElementById('cookieLearnMore').addEventListener('click', function(e) {
   e.preventDefault();
-  if (typeof showToast === 'function') {
-    showToast('Privacy Policy: We use cookies to improve your experience.', 'success');
-  }
+  showToast('Privacy Policy: We use cookies to improve your experience.', 'success');
 });
 
 // ============================================================
-// LIGHTBOX GALLERY - Full Featured with Full-Screen Support
+// LIGHTBOX GALLERY
 // ============================================================
 (function() {
-  // Lightbox state
   const state = {
     images: [],
     currentIndex: 0,
@@ -957,8 +812,6 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     startScale: 1,
     lastTouchDist: 0,
   };
-
-  // DOM refs
   let lightbox = null;
   let imageEl = null;
   let wrapperEl = null;
@@ -966,52 +819,33 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
   let zoomLevelEl = null;
   let fullscreenBtn = null;
 
-  // Create lightbox DOM
   function createLightbox() {
     if (document.getElementById('lightbox')) return;
-
     const html = `
       <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery">
         <div class="lightbox__overlay"></div>
-        <button class="lightbox__close" aria-label="Close gallery" title="Close (ESC)">
-          <i class="fas fa-times"></i>
-        </button>
+        <button class="lightbox__close" aria-label="Close gallery" title="Close (ESC)"><i class="fas fa-times"></i></button>
         <div class="lightbox__counter" id="lightboxCounter"></div>
         <div class="lightbox__controls-right">
-          <button class="lightbox__fullscreen" id="lightboxFullscreen" aria-label="Toggle fullscreen" title="Fullscreen (F)">
-            <i class="fas fa-expand"></i>
-          </button>
-          <button class="lightbox__share" aria-label="Share image" title="Share image">
-            <i class="fas fa-arrow-up-from-bracket"></i>
-          </button>
+          <button class="lightbox__fullscreen" id="lightboxFullscreen" aria-label="Toggle fullscreen" title="Fullscreen (F)"><i class="fas fa-expand"></i></button>
+          <button class="lightbox__share" aria-label="Share image" title="Share image"><i class="fas fa-arrow-up-from-bracket"></i></button>
         </div>
         <div class="lightbox__container">
           <div class="lightbox__image-wrapper" id="lightboxWrapper">
             <img src="" alt="Gallery image" id="lightboxImage" />
           </div>
         </div>
-        <button class="lightbox__prev" aria-label="Previous image" title="Previous (←)">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="lightbox__next" aria-label="Next image" title="Next (→)">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+        <button class="lightbox__prev" aria-label="Previous image" title="Previous (←)"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox__next" aria-label="Next image" title="Next (→)"><i class="fas fa-chevron-right"></i></button>
         <div class="lightbox__zoom-controls">
-          <button class="lightbox__zoom-out" aria-label="Zoom out" title="Zoom out">
-            <i class="fas fa-minus"></i>
-          </button>
+          <button class="lightbox__zoom-out" aria-label="Zoom out" title="Zoom out"><i class="fas fa-minus"></i></button>
           <span class="lightbox__zoom-level" id="lightboxZoomLevel">100%</span>
-          <button class="lightbox__zoom-in" aria-label="Zoom in" title="Zoom in">
-            <i class="fas fa-plus"></i>
-          </button>
-          <button class="lightbox__zoom-reset" aria-label="Reset zoom" title="Reset zoom">
-            <i class="fas fa-expand"></i>
-          </button>
+          <button class="lightbox__zoom-in" aria-label="Zoom in" title="Zoom in"><i class="fas fa-plus"></i></button>
+          <button class="lightbox__zoom-reset" aria-label="Reset zoom" title="Reset zoom"><i class="fas fa-expand"></i></button>
         </div>
         <div class="lightbox__dots" id="lightboxDots"></div>
       </div>
     `;
-
     document.body.insertAdjacentHTML('beforeend', html);
     lightbox = document.getElementById('lightbox');
     imageEl = document.getElementById('lightboxImage');
@@ -1020,7 +854,6 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     zoomLevelEl = document.getElementById('lightboxZoomLevel');
     fullscreenBtn = document.getElementById('lightboxFullscreen');
 
-    // Event listeners
     lightbox.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
     lightbox.querySelector('.lightbox__prev').addEventListener('click', prevImage);
     lightbox.querySelector('.lightbox__next').addEventListener('click', nextImage);
@@ -1029,27 +862,18 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     lightbox.querySelector('.lightbox__zoom-out').addEventListener('click', zoomOut);
     lightbox.querySelector('.lightbox__zoom-reset').addEventListener('click', resetZoom);
     fullscreenBtn.addEventListener('click', toggleFullscreen);
-
-    // Keyboard events
     document.addEventListener('keydown', handleKeydown);
 
-    // Mouse events for panning
     wrapperEl.addEventListener('mousedown', onDragStart);
     document.addEventListener('mousemove', onDragMove);
     document.addEventListener('mouseup', onDragEnd);
 
-    // Touch events for panning and pinch
     wrapperEl.addEventListener('touchstart', onTouchStart, { passive: false });
     wrapperEl.addEventListener('touchmove', onTouchMove, { passive: false });
     wrapperEl.addEventListener('touchend', onTouchEnd, { passive: false });
-
-    // Mouse wheel zoom
     wrapperEl.addEventListener('wheel', onWheel, { passive: false });
-
-    // Click on overlay to close
     lightbox.querySelector('.lightbox__overlay').addEventListener('click', closeLightbox);
 
-    // Dots click
     lightbox.addEventListener('click', function(e) {
       const dot = e.target.closest('.lightbox__dot');
       if (dot) {
@@ -1057,110 +881,68 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
         if (!isNaN(index)) goToImage(index);
       }
     });
-
-    // Image load handlers
     imageEl.addEventListener('load', function() {
       wrapperEl.classList.remove('loading');
       this.classList.add('loaded');
     });
-
     imageEl.addEventListener('error', function() {
       wrapperEl.classList.remove('loading');
-      console.error('Failed to load image:', this.src);
       this.alt = 'Image failed to load';
       this.classList.add('loaded');
     });
 
-    // Fullscreen change listener
     document.addEventListener('fullscreenchange', onFullscreenChange);
     document.addEventListener('webkitfullscreenchange', onFullscreenChange);
     document.addEventListener('mozfullscreenchange', onFullscreenChange);
     document.addEventListener('MSFullscreenChange', onFullscreenChange);
   }
 
-  // ===== Fullscreen Functions =====
-  function isFullscreenEnabled() {
-    return document.fullscreenEnabled || 
-           document.webkitFullscreenEnabled || 
-           document.mozFullScreenEnabled || 
-           document.msFullscreenEnabled;
-  }
-
   function getFullscreenElement() {
-    return document.fullscreenElement || 
-           document.webkitFullscreenElement || 
-           document.mozFullScreenElement || 
-           document.msFullscreenElement;
+    return document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
   }
-
   function requestFullscreen() {
     const el = lightbox;
-    if (el.requestFullscreen) {
-      el.requestFullscreen();
-    } else if (el.webkitRequestFullscreen) {
-      el.webkitRequestFullscreen();
-    } else if (el.mozRequestFullScreen) {
-      el.mozRequestFullScreen();
-    } else if (el.msRequestFullscreen) {
-      el.msRequestFullscreen();
-    } else {
-      // Fallback: expand to cover viewport
+    if (el.requestFullscreen) el.requestFullscreen();
+    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    else if (el.mozRequestFullScreen) el.mozRequestFullScreen();
+    else if (el.msRequestFullscreen) el.msRequestFullscreen();
+    else {
       lightbox.style.position = 'fixed';
       lightbox.style.inset = '0';
       lightbox.style.width = '100vw';
       lightbox.style.height = '100vh';
-      lightbox.style.zIndex = '999999';
       state.isFullscreen = true;
       updateFullscreenIcon();
     }
   }
-
   function exitFullscreen() {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen();
-    } else {
-      // Fallback: reset styles
+    if (document.exitFullscreen) document.exitFullscreen();
+    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+    else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+    else if (document.msExitFullscreen) document.msExitFullscreen();
+    else {
       lightbox.style.position = '';
       lightbox.style.inset = '';
       lightbox.style.width = '';
       lightbox.style.height = '';
-      lightbox.style.zIndex = '';
       state.isFullscreen = false;
       updateFullscreenIcon();
     }
   }
-
   function toggleFullscreen() {
-    if (state.isFullscreen || getFullscreenElement()) {
-      exitFullscreen();
-    } else {
-      requestFullscreen();
-    }
+    if (state.isFullscreen || getFullscreenElement()) exitFullscreen();
+    else requestFullscreen();
   }
-
   function onFullscreenChange() {
-    const isFull = !!getFullscreenElement();
-    state.isFullscreen = isFull;
+    state.isFullscreen = !!getFullscreenElement();
     updateFullscreenIcon();
   }
-
   function updateFullscreenIcon() {
     if (!fullscreenBtn) return;
     const icon = fullscreenBtn.querySelector('i');
-    if (state.isFullscreen) {
-      icon.className = 'fas fa-compress';
-    } else {
-      icon.className = 'fas fa-expand';
-    }
+    icon.className = state.isFullscreen ? 'fas fa-compress' : 'fas fa-expand';
   }
 
-  // ===== Open Lightbox =====
   function openLightbox(index) {
     if (!state.images.length) return;
     createLightbox();
@@ -1172,43 +954,28 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     state.isFullscreen = false;
     wrapperEl.classList.add('loading');
     imageEl.classList.remove('loaded');
-
-    const imgSrc = state.images[state.currentIndex];
-    imageEl.src = imgSrc;
+    imageEl.src = state.images[state.currentIndex];
     imageEl.alt = 'Gallery image ' + (state.currentIndex + 1);
-
     updateCounter();
     updateDots();
     updateZoomLevel();
     updateFullscreenIcon();
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
-
-    // Preload adjacent images
     preloadImage(state.currentIndex + 1);
     preloadImage(state.currentIndex - 1);
   }
-
-  // ===== Close Lightbox =====
   function closeLightbox() {
     state.isOpen = false;
-    if (state.isFullscreen || getFullscreenElement()) {
-      exitFullscreen();
-    }
-    if (lightbox) {
-      lightbox.classList.remove('active');
-    }
+    if (state.isFullscreen || getFullscreenElement()) exitFullscreen();
+    lightbox.classList.remove('active');
     document.body.style.overflow = '';
     state.scale = 1;
     state.translateX = 0;
     state.translateY = 0;
-    if (imageEl) {
-      imageEl.style.transform = 'scale(1) translate(0, 0)';
-      wrapperEl.classList.remove('loading');
-    }
+    imageEl.style.transform = 'scale(1) translate(0, 0)';
+    wrapperEl.classList.remove('loading');
   }
-
-  // ===== Go to Image =====
   function goToImage(index) {
     if (index < 0) index = state.images.length - 1;
     if (index >= state.images.length) index = 0;
@@ -1218,43 +985,24 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     state.translateY = 0;
     wrapperEl.classList.add('loading');
     imageEl.classList.remove('loaded');
-
-    const imgSrc = state.images[index];
-    imageEl.src = imgSrc;
+    imageEl.src = state.images[index];
     imageEl.alt = 'Gallery image ' + (index + 1);
-
     updateCounter();
     updateDots();
     updateZoomLevel();
-
-    // Preload adjacent images
     preloadImage(index + 1);
     preloadImage(index - 1);
   }
-
-  function nextImage() {
-    goToImage(state.currentIndex + 1);
-  }
-
-  function prevImage() {
-    goToImage(state.currentIndex - 1);
-  }
-
-  // ===== Preload images =====
+  function nextImage() { goToImage(state.currentIndex + 1); }
+  function prevImage() { goToImage(state.currentIndex - 1); }
   function preloadImage(index) {
     if (index < 0 || index >= state.images.length) return;
     const img = new Image();
     img.src = state.images[index];
   }
-
-  // ===== Counter =====
   function updateCounter() {
-    if (counterEl) {
-      counterEl.textContent = `${state.currentIndex + 1} / ${state.images.length}`;
-    }
+    if (counterEl) counterEl.textContent = `${state.currentIndex + 1} / ${state.images.length}`;
   }
-
-  // ===== Dots =====
   function updateDots() {
     const dotsContainer = document.getElementById('lightboxDots');
     if (!dotsContainer) return;
@@ -1268,65 +1016,31 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     }
     dotsContainer.innerHTML = html;
   }
-
-  // ===== Zoom =====
   function updateZoomLevel() {
-    if (zoomLevelEl) {
-      zoomLevelEl.textContent = Math.round(state.scale * 100) + '%';
-    }
+    if (zoomLevelEl) zoomLevelEl.textContent = Math.round(state.scale * 100) + '%';
   }
-
   function applyTransform() {
     if (!imageEl) return;
     imageEl.style.transform = `scale(${state.scale}) translate(${state.translateX}px, ${state.translateY}px)`;
     updateZoomLevel();
   }
-
   function zoomIn() {
     const newScale = Math.min(state.scale * 1.25, state.maxScale);
-    if (newScale !== state.scale) {
-      state.scale = newScale;
-      applyTransform();
-    }
+    if (newScale !== state.scale) { state.scale = newScale; applyTransform(); }
   }
-
   function zoomOut() {
     const newScale = Math.max(state.scale / 1.25, state.minScale);
-    if (newScale !== state.scale) {
-      state.scale = newScale;
-      applyTransform();
-    }
+    if (newScale !== state.scale) { state.scale = newScale; applyTransform(); }
   }
-
-  function resetZoom() {
-    state.scale = 1;
-    state.translateX = 0;
-    state.translateY = 0;
-    applyTransform();
-  }
-
-  // ===== Share =====
+  function resetZoom() { state.scale = 1; state.translateX = 0; state.translateY = 0; applyTransform(); }
   function shareImage() {
     const url = state.images[state.currentIndex];
     if (navigator.share) {
-      navigator.share({
-        title: 'Broad Experiential - Project Gallery',
-        text: 'Check out this project from Broad Experiential!',
-        url: url,
-      }).catch(() => {});
+      navigator.share({ title: 'Broad Experiential - Project Gallery', text: 'Check out this project!', url }).catch(() => {});
     } else {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(() => {
-          showToast('Image URL copied to clipboard!', 'success');
-        }).catch(() => {
-          fallbackCopy(url);
-        });
-      } else {
-        fallbackCopy(url);
-      }
+      navigator.clipboard.writeText(url).then(() => showToast('Image URL copied!', 'success')).catch(() => fallbackCopy(url));
     }
   }
-
   function fallbackCopy(text) {
     const input = document.createElement('input');
     input.value = text;
@@ -1334,16 +1048,10 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     input.style.opacity = '0';
     document.body.appendChild(input);
     input.select();
-    try {
-      document.execCommand('copy');
-      showToast('Image URL copied to clipboard!', 'success');
-    } catch (e) {
-      showToast('Unable to copy URL. Please try manually.', 'error');
-    }
+    try { document.execCommand('copy'); showToast('Image URL copied!', 'success'); } catch (e) { showToast('Unable to copy.', 'error'); }
     document.body.removeChild(input);
   }
 
-  // ===== Drag/Pan =====
   function onDragStart(e) {
     if (state.scale <= 1) return;
     state.isDragging = true;
@@ -1353,7 +1061,6 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     state.startTranslateY = state.translateY;
     wrapperEl.style.cursor = 'grabbing';
   }
-
   function onDragMove(e) {
     if (!state.isDragging) return;
     const dx = e.clientX - state.startX;
@@ -1362,56 +1069,34 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     if (!img) return;
     const rect = img.getBoundingClientRect();
     const containerRect = wrapperEl.getBoundingClientRect();
-    const imgWidth = rect.width * state.scale;
-    const imgHeight = rect.height * state.scale;
-    const maxX = Math.max(0, (imgWidth - containerRect.width) / 2);
-    const maxY = Math.max(0, (imgHeight - containerRect.height) / 2);
-
-    let newX = state.startTranslateX + dx;
-    let newY = state.startTranslateY + dy;
-    newX = Math.min(maxX, Math.max(-maxX, newX));
-    newY = Math.min(maxY, Math.max(-maxY, newY));
-
-    state.translateX = newX;
-    state.translateY = newY;
+    const maxX = Math.max(0, (rect.width * state.scale - containerRect.width) / 2);
+    const maxY = Math.max(0, (rect.height * state.scale - containerRect.height) / 2);
+    state.translateX = Math.min(maxX, Math.max(-maxX, state.startTranslateX + dx));
+    state.translateY = Math.min(maxY, Math.max(-maxY, state.startTranslateY + dy));
     applyTransform();
   }
+  function onDragEnd() { state.isDragging = false; if (wrapperEl) wrapperEl.style.cursor = ''; }
 
-  function onDragEnd() {
-    state.isDragging = false;
-    if (wrapperEl) wrapperEl.style.cursor = '';
-  }
-
-  // ===== Touch Support =====
   function onTouchStart(e) {
     if (e.touches.length === 2) {
-      const t1 = e.touches[0];
-      const t2 = e.touches[1];
+      const t1 = e.touches[0], t2 = e.touches[1];
       state.lastTouchDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
       state.startScale = state.scale;
-    } else if (e.touches.length === 1) {
-      if (state.scale > 1) {
-        state.isDragging = true;
-        state.startX = e.touches[0].clientX;
-        state.startY = e.touches[0].clientY;
-        state.startTranslateX = state.translateX;
-        state.startTranslateY = state.translateY;
-      }
+    } else if (e.touches.length === 1 && state.scale > 1) {
+      state.isDragging = true;
+      state.startX = e.touches[0].clientX;
+      state.startY = e.touches[0].clientY;
+      state.startTranslateX = state.translateX;
+      state.startTranslateY = state.translateY;
     }
   }
-
   function onTouchMove(e) {
     e.preventDefault();
     if (e.touches.length === 2) {
-      const t1 = e.touches[0];
-      const t2 = e.touches[1];
+      const t1 = e.touches[0], t2 = e.touches[1];
       const dist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
-      const scaleChange = dist / state.lastTouchDist;
-      const newScale = Math.min(Math.max(state.startScale * scaleChange, state.minScale), state.maxScale);
-      if (newScale !== state.scale) {
-        state.scale = newScale;
-        applyTransform();
-      }
+      const newScale = Math.min(Math.max(state.startScale * (dist / state.lastTouchDist), state.minScale), state.maxScale);
+      if (newScale !== state.scale) { state.scale = newScale; applyTransform(); }
     } else if (e.touches.length === 1 && state.isDragging) {
       const dx = e.touches[0].clientX - state.startX;
       const dy = e.touches[0].clientY - state.startY;
@@ -1419,117 +1104,57 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
       if (!img) return;
       const rect = img.getBoundingClientRect();
       const containerRect = wrapperEl.getBoundingClientRect();
-      const imgWidth = rect.width * state.scale;
-      const imgHeight = rect.height * state.scale;
-      const maxX = Math.max(0, (imgWidth - containerRect.width) / 2);
-      const maxY = Math.max(0, (imgHeight - containerRect.height) / 2);
-
-      let newX = state.startTranslateX + dx;
-      let newY = state.startTranslateY + dy;
-      newX = Math.min(maxX, Math.max(-maxX, newX));
-      newY = Math.min(maxY, Math.max(-maxY, newY));
-
-      state.translateX = newX;
-      state.translateY = newY;
+      const maxX = Math.max(0, (rect.width * state.scale - containerRect.width) / 2);
+      const maxY = Math.max(0, (rect.height * state.scale - containerRect.height) / 2);
+      state.translateX = Math.min(maxX, Math.max(-maxX, state.startTranslateX + dx));
+      state.translateY = Math.min(maxY, Math.max(-maxY, state.startTranslateY + dy));
       applyTransform();
     }
   }
+  function onTouchEnd() { state.isDragging = false; state.lastTouchDist = 0; }
+  function onWheel(e) { e.preventDefault(); const delta = e.deltaY > 0 ? 0.9 : 1.1; state.scale = Math.min(Math.max(state.scale * delta, state.minScale), state.maxScale); applyTransform(); }
 
-  function onTouchEnd() {
-    state.isDragging = false;
-    state.lastTouchDist = 0;
-  }
-
-  // ===== Mouse Wheel Zoom =====
-  function onWheel(e) {
-    e.preventDefault();
-    const delta = e.deltaY > 0 ? 0.9 : 1.1;
-    const newScale = Math.min(Math.max(state.scale * delta, state.minScale), state.maxScale);
-    if (newScale !== state.scale) {
-      state.scale = newScale;
-      applyTransform();
-    }
-  }
-
-  // ===== Keyboard =====
   function handleKeydown(e) {
     if (!state.isOpen) return;
     switch (e.key) {
-      case 'Escape':
-        closeLightbox();
-        break;
-      case 'ArrowLeft':
-        e.preventDefault();
-        prevImage();
-        break;
-      case 'ArrowRight':
-        e.preventDefault();
-        nextImage();
-        break;
-      case '+':
-      case '=':
-        e.preventDefault();
-        zoomIn();
-        break;
-      case '-':
-        e.preventDefault();
-        zoomOut();
-        break;
-      case '0':
-        e.preventDefault();
-        resetZoom();
-        break;
-      case 'f':
-      case 'F':
-        e.preventDefault();
-        toggleFullscreen();
-        break;
+      case 'Escape': closeLightbox(); break;
+      case 'ArrowLeft': e.preventDefault(); prevImage(); break;
+      case 'ArrowRight': e.preventDefault(); nextImage(); break;
+      case '+': case '=': e.preventDefault(); zoomIn(); break;
+      case '-': e.preventDefault(); zoomOut(); break;
+      case '0': e.preventDefault(); resetZoom(); break;
+      case 'f': case 'F': e.preventDefault(); toggleFullscreen(); break;
     }
   }
 
-  // ===== Set Gallery Images =====
-  function setGalleryImages(images) {
-    state.images = images || [];
-  }
+  window.lightbox = {
+    open: openLightbox,
+    close: closeLightbox,
+    setImages(images) { state.images = images || []; },
+    next: nextImage,
+    prev: prevImage,
+    zoomIn, zoomOut, resetZoom,
+    toggleFullscreen,
+    isFullscreen: () => state.isFullscreen || !!getFullscreenElement(),
+  };
 
-  // ===== Open Lightbox from Gallery Click =====
+  // Auto‑setup gallery clicks in detail view
   function setupGalleryLightbox() {
     detailContainer.addEventListener('click', function(e) {
       const img = e.target.closest('.detail-gallery img');
       if (img) {
         const gallery = img.closest('.detail-gallery');
         if (gallery) {
-          const allImages = gallery.querySelectorAll('img');
-          const images = Array.from(allImages).map(el => el.src);
-          const index = images.indexOf(img.src);
+          const allImages = Array.from(gallery.querySelectorAll('img')).map(el => el.src);
+          const index = allImages.indexOf(img.src);
           if (index !== -1) {
-            setGalleryImages(images);
-            openLightbox(index);
+            window.lightbox.setImages(allImages);
+            window.lightbox.open(index);
           }
         }
       }
     });
   }
-
-  // ===== Expose functions globally =====
-  window.lightbox = {
-    open: openLightbox,
-    close: closeLightbox,
-    setImages: setGalleryImages,
-    next: nextImage,
-    prev: prevImage,
-    zoomIn: zoomIn,
-    zoomOut: zoomOut,
-    resetZoom: resetZoom,
-    toggleFullscreen: toggleFullscreen,
-    isFullscreen: () => state.isFullscreen || !!getFullscreenElement(),
-  };
-
-  // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupGalleryLightbox);
-  } else {
-    setupGalleryLightbox();
-  }
-
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setupGalleryLightbox);
+  else setupGalleryLightbox();
 })();
