@@ -572,15 +572,28 @@ document.querySelectorAll('.filter__btn').forEach(btn => {
   });
 });
 
-// ===== NAV TOGGLE =====
+// ===== NAV TOGGLE (FIXED) =====
 const navToggle = document.getElementById('navToggle');
 const navList = document.querySelector('.nav__list');
+
+// Toggle menu open/close when hamburger is clicked
 if (navToggle) {
   navToggle.addEventListener('click', () => {
     navList.classList.toggle('open');
     navToggle.classList.toggle('open');
+    const isExpanded = navList.classList.contains('open');
+    navToggle.setAttribute('aria-expanded', isExpanded);
   });
 }
+
+// Close the mobile menu when ANY link inside it is clicked
+document.querySelectorAll('.nav__list a').forEach(link => {
+  link.addEventListener('click', () => {
+    navList.classList.remove('open');
+    navToggle.classList.remove('open');
+    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
 
 // ===== SCROLL TOP =====
 const scrollTopBtn = document.getElementById('scrollTop');
