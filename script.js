@@ -2,355 +2,251 @@
 const serviceData = {
   'vehicle-branding': {
     title: 'Vehicle Branding',
-    description: 'We turn your fleet into powerful, moving billboards that capture attention across East Africa. Our full-wrap solutions ensure your brand travels everywhere.',
+    description: 'We turn your fleet into powerful, moving billboards that capture attention across East Africa.',
     heroImage: 'images/car_branding/carbranding1.jpg',
     stats: [
       { number: '50+', label: 'Fleets Branded' },
       { number: '15+', label: 'Happy Clients' },
-      { number: '100%', label: 'Satisfaction Rate' },
+      { number: '100%', label: 'Satisfaction Rate' }
     ],
     gallery: [
       'images/car_branding/carbranding2.webp',
       'images/car_branding/carbranding4.jpg',
       'images/car_branding/carbranding5.jpg',
-      'images/car_branding/carbranding6.jpg',
-      'images/car_branding/WhatsApp Image 2026-07-06 at 9.13.01 PM.jpeg',
-      'images/car_branding/WhatsApp Image 2026-07-06 at 9.13.00 PM (1).jpeg',
+      'images/car_branding/carbranding6.jpg'
     ]
   },
   'shop-branding': {
     title: 'Shop Branding',
-    description: 'Transform your retail space into an immersive brand experience. From storefronts to interiors, we create environments that attract and retain customers.',
+    description: 'Transform your retail space into an immersive brand experience.',
     heroImage: 'images/shop_branding/sunking_shopbranding.jfif',
     stats: [
       { number: '30+', label: 'Shops Transformed' },
-      { number: '20+', label: 'Retail Partners' },
-      { number: '95%', label: 'Client Retention' },
+      { number: '20+', label: 'Retail Partners' }
     ],
     gallery: [
-      'images/The convenient way of cooking is to get yourselves connected na MGAS. Eldoret depot on to the next site(WEBP).webp',
+      'images/shop_branding/sunking_shopbranding.jfif',
       'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80',
-      'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600&q=80',
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80',
+      'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600&q=80'
     ]
   },
   'signages': {
     title: 'Signages',
-    description: 'Make a lasting impression with high-impact indoor and outdoor signage. We design, fabricate, and install signs that command attention.',
+    description: 'Make a lasting impression with high-impact indoor and outdoor signage.',
     heroImage: 'https://images.unsplash.com/photo-1553531384-cc0ac1ae1f0d?w=1200&q=80',
-    stats: [
-      { number: '200+', label: 'Signs Installed' },
-      { number: '50+', label: 'Corporate Clients' },
-      { number: '99%', label: 'On-Time Delivery' },
-    ],
+    stats: [{ number: '200+', label: 'Signs Installed' }],
     gallery: [
       'https://images.unsplash.com/photo-1553531384-cc0ac1ae1f0d?w=600&q=80',
-      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80',
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
-      'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80',
+      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80'
     ]
   },
   'wall-branding': {
     title: 'Wall Branding',
-    description: 'Turn blank walls into powerful brand statements. Our large-scale murals and graphics transform spaces and captivate audiences.',
+    description: 'Turn blank walls into powerful brand statements.',
     heroImage: 'images/wall_branding/vihiga_wallbranding.jfif',
-    stats: [
-      { number: '100+', label: 'Walls Transformed' },
-      { number: '40+', label: 'Corporate Spaces' },
-      { number: '100%', label: 'Visual Impact' },
-    ],
+    stats: [{ number: '100+', label: 'Walls Transformed' }],
     gallery: [
-      'images/wall_branding/vihiga_wallbranding2.jfif',
-      'images/wall_branding/itel_wallbranding1.jfif',
-      'images/wall_branding/itel_wallbranding.jfif',
       'images/wall_branding/vihiga_wallbranding.jfif',
-      'images/wall_branding/wallbranding2.jpeg',
-      'images/wall_branding/wallbranding3.jpeg',
-      'images/wall_branding/wallbranding4.jpeg',
-      'images/wall_branding/wallbranding5.jpeg',
-      'images/wall_branding/wallbranding6.jpeg',
-      'images/wall_branding/wallbranding7.jpeg',
-      'images/wall_branding/wallbranding8.jpeg',
-      'images/wall_branding/wallbranding9.jpeg',
-      'images/wall_branding/wallbranding10.jpeg',
-      'images/wall_branding/wallbranding11.jpeg',
-      'images/wall_branding/wallbranding12.jpeg',
-      'images/wall_branding/wallbranding13.jpeg',
-      'images/wall_branding/wallbranding14.jpeg',
-      'images/wall_branding/wallbranding1.jpeg',
+      'images/wall_branding/wallbranding1.jpeg'
     ]
   },
   'office-branding': {
     title: 'Office Branding',
-    description: 'Create a professional environment that reflects your brand culture. We design inspiring workspaces that impress clients and motivate employees.',
+    description: 'Create a professional environment that reflects your brand culture.',
     heroImage: 'images/offficebranding2.jpg',
-    stats: [
-      { number: '40+', label: 'Offices Branded' },
-      { number: '25+', label: 'Corporate Clients' },
-      { number: '100%', label: 'Employee Satisfaction' },
-    ],
-    gallery: [
-      'images/slide_1.jpg',
-      'images/office_branding.jpg',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80',
-      'https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?w=600&q=80',
-    ]
+    stats: [{ number: '40+', label: 'Offices Branded' }],
+    gallery: ['images/office_branding.jpg']
   },
   'printing-design': {
     title: 'Printing & Design',
-    description: 'High-quality printing and design services for all your marketing collateral. From digital to screen printing, we bring your ideas to life.',
+    description: 'High-quality printing and design services for all your marketing collateral.',
     heroImage: 'images/print/print1.webp',
-    stats: [
-      { number: '1M+', label: 'Prints Delivered' },
-      { number: '100+', label: 'Design Projects' },
-      { number: '100%', label: 'Quality Accuracy' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=600&q=80',
-      'https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=600&q=80',
-      'https://images.unsplash.com/photo-1531834823707-a2f15777c8e7?w=600&q=80',
-      'https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?w=600&q=80',
-    ]
+    stats: [{ number: '1M+', label: 'Prints Delivered' }],
+    gallery: ['images/print/print1.webp']
   },
   'merchandise-branding': {
     title: 'Merchandise Branding',
-    description: 'Custom-branded merchandise that keeps your brand top-of-mind. Premium T-shirts, caps, mugs, and promotional items for every occasion.',
+    description: 'Custom-branded merchandise that keeps your brand top-of-mind.',
     heroImage: 'https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=1200&q=80',
-    stats: [
-      { number: '50k+', label: 'Items Produced' },
-      { number: '30+', label: 'Product Types' },
-      { number: '100%', label: 'Customizable' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=600&q=80',
-      'https://images.unsplash.com/photo-1585499629798-8fbc9d8c49e?w=600&q=80',
-      'https://images.unsplash.com/photo-1554342872-034a06341eee?w=600&q=80',
-      'https://images.unsplash.com/photo-1526178613552-2b45c6c302f0?w=600&q=80',
-    ]
+    stats: [{ number: '50k+', label: 'Items Produced' }],
+    gallery: ['https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=600&q=80']
   },
   'experiential-promotions': {
     title: 'Experiential Promotions',
-    description: 'Immersive brand activations that create unforgettable connections. We design and execute events that engage audiences and drive results.',
+    description: 'Immersive brand activations that create unforgettable connections.',
     heroImage: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?w=1200&q=80',
-    stats: [
-      { number: '80+', label: 'Events Executed' },
-      { number: '50k+', label: 'People Reached' },
-      { number: '5/5', label: 'Client Rating' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600&q=80',
-      'https://images.unsplash.com/photo-1478147427282-58a87a120781?w=600&q=80',
-      'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80',
-      'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80',
-    ]
+    stats: [{ number: '80+', label: 'Events Executed' }],
+    gallery: ['https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600&q=80']
   },
   'branding-strategy': {
     title: 'Branding Strategy',
-    description: 'Strategic brand identity development that captures your essence and differentiates you from competitors. We build brands that resonate.',
+    description: 'Strategic brand identity development that captures your essence.',
     heroImage: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1200&q=80',
-    stats: [
-      { number: '60+', label: 'Brands Built' },
-      { number: '40+', label: 'Strategy Sessions' },
-      { number: '100%', label: 'Client Commitment' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80',
-      'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80',
-      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80',
-      'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80',
-    ]
+    stats: [{ number: '60+', label: 'Brands Built' }],
+    gallery: ['https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80']
   }
 };
 
+// ===== CLIENTELE DATA =====
 const clienteleData = {
   'sunking': {
     title: 'Sunking',
-    description: 'Sunking is a leader in affordable solar systems, providing clean energy solutions for communities across Kenya. We partnered with them to create impactful branding that communicates their mission and drives community engagement.',
+    description: 'Sunking is a leader in affordable solar systems.',
     heroImage: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&q=80',
-    stats: [
-      { number: '12+', label: 'Branding Assets' },
-      { number: '5+', label: 'Campaigns Launched' },
-      { number: '100k+', label: 'People Reached' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&q=80',
-      'https://images.unsplash.com/photo-1532996122725-e3c354a0b15b?w=600&q=80',
-      'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=600&q=80',
-      'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80',
-    ]
+    stats: [{ number: '12+', label: 'Branding Assets' }],
+    gallery: []
   },
   'world-vision': {
     title: 'World Vision',
-    description: 'World Vision started in 1974 and has grown in Kenya, helping children and communities in 37 out of 47 counties.',
+    description: 'World Vision has grown in Kenya, helping children and communities.',
     heroImage: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=80',
-    stats: [
-      { number: '20+', label: 'Branding Assets' },
-      { number: '10+', label: 'Campaigns Launched' },
-      { number: '500k+', label: 'People Reached' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80',
-      'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=80',
-      'https://images.unsplash.com/photo-1593113630400-ea4288922497?w=600&q=80',
-      'https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?w=600&q=80',
-    ]
+    stats: [{ number: '20+', label: 'Branding Assets' }],
+    gallery: []
   },
   'fresh-life': {
     title: 'Fresh Life',
-    description: 'Fresh Life provides clean and safe sanitation solutions across Kenya. We helped them build a brand identity that communicates hygiene, dignity, and innovation.',
+    description: 'Fresh Life provides clean and safe sanitation solutions.',
     heroImage: 'https://images.unsplash.com/photo-1532996122725-e3c354a0b15b?w=1200&q=80',
-    stats: [
-      { number: '8+', label: 'Campaigns' },
-      { number: '50+', label: 'Installations' },
-      { number: '100%', label: 'Brand Recognition' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1532996122725-e3c354a0b15b?w=600&q=80',
-      'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80',
-      'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=600&q=80',
-      'https://images.unsplash.com/photo-1531834823707-a2f15777c8e7?w=600&q=80',
-    ]
+    stats: [{ number: '8+', label: 'Campaigns' }],
+    gallery: []
   },
   'mgas': {
     title: 'M-Gas',
-    description: 'M-Gas empowers you with affordable and clean cooking solutions, to help you enjoy your cooking experience.',
+    description: 'M-Gas empowers you with affordable and clean cooking solutions.',
     heroImage: 'images/clients/m_gas_logo.jfif',
-    stats: [
-      { number: '200+', label: 'Enterprise Partners' },
-      { number: '150+', label: 'SME Clients' },
-      { number: '4.9/5', label: 'Client Rating' },
-    ],
-    gallery: [
-      'images/clients/mgas/mgas1.webp',
-      'images/clients/mgas/mgas2.webp',
-      'images/clients/mgas/mgas3.webp',
-      'images/clients/mgas/mgas4.webp',
-      'images/clients/mgas/mgas5.webp',
-    ]
+    stats: [{ number: '200+', label: 'Partners' }],
+    gallery: []
   },
   'telkom': {
     title: 'Telkom',
-    description: "Kenya's leading telecommunications provider trusted by millions. We partnered with Telkom to deliver premium branding solutions across their expansive network and retail presence.",
+    description: "Kenya's leading telecommunications provider.",
     heroImage: 'images/clients/telkom-kenya.webp',
-    stats: [
-      { number: '50+', label: 'Retail Outlets' },
-      { number: '30+', label: 'Branding Projects' },
-      { number: '100%', label: 'Client Satisfaction' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-      'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80',
-    ]
+    stats: [{ number: '50+', label: 'Outlets' }],
+    gallery: []
   },
   'uip-real-estate': {
     title: 'UIP Real Estate',
-    description: "Kenya's trusted real estate company. Browse affordable land, residential, commercial & industrial properties.",
+    description: "Kenya's trusted real estate company.",
     heroImage: 'images/clients/uip_real_estate.jfif',
-    stats: [
-      { number: '100+', label: 'Branches Branded' },
-      { number: '20+', label: 'Corporate Projects' },
-      { number: '99%', label: 'Quality Rating' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=600&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
-    ]
+    stats: [{ number: '100+', label: 'Branches' }],
+    gallery: []
   },
   'rachier-and-amollo': {
     title: 'Rachier and Amollo LLP',
-    description: 'Nationally recognized, dynamic and result oriented law firm.',
+    description: 'Nationally recognized law firm.',
     heroImage: 'images/clients/rachier_and_amollo.png',
-    stats: [
-      { number: '40+', label: 'Projects Complete' },
-      { number: '15+', label: 'Lounge Projects' },
-      { number: '100%', label: 'Quality Assurance' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80',
-      'https://images.unsplash.com/photo-1542296332-2e4473faf563?w=600&q=80',
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80',
-      'https://images.unsplash.com/photo-1542818219-3daa53ab5d5b?w=600&q=80',
-    ]
+    stats: [{ number: '40+', label: 'Projects' }],
+    gallery: []
   },
   'sistema-bio': {
     title: 'Sistema Bio',
-    description: 'Sistema.bio is a prefabricated modular biodigester package that includes a full suite of biogas appliances and connections.',
+    description: 'Prefabricated modular biodigester solutions.',
     heroImage: 'images/clients/sistema_bio.png',
-    stats: [
-      { number: '60+', label: 'Retail Activations' },
-      { number: '25+', label: 'Branding Projects' },
-      { number: '98%', label: 'Consumer Engagement' },
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
-      'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
-      'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
-      'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&q=80',
-    ]
+    stats: [{ number: '60+', label: 'Activations' }],
+    gallery: []
   }
 };
 
-// ===== DOM REFS =====
+// ===== DOM REFERENCES =====
 const detailSection = document.getElementById('serviceDetail');
 const detailContainer = document.getElementById('detailContainer');
 const mainContent = document.getElementById('mainContent');
 const body = document.body;
 const logoLink = document.getElementById('logoLink');
 const backBtn = document.getElementById('detailBackBtn');
-
 let returnSectionId = '#services';
 
+// ===== CLIENTELE INFINITE SCROLL =====
+const clientTrack = document.getElementById('clienteleTrack');
+const originalClients = [
+  { client: 'sunking', logo: 'images/clients/sunking.png', name: 'Sunking', tag: 'Affordable Solar Systems' },
+  { client: 'world-vision', logo: 'images/clients/world_vision.png', name: 'World Vision', tag: 'Helping children in 37 counties' },
+  { client: 'fresh-life', logo: 'images/clients/freshlife.jfif', name: 'Fresh Life', tag: "Let's Do More" },
+  { client: 'mgas', logo: 'images/clients/m_gas_logo.jfif', name: 'M-Gas', tag: 'Clean cooking solutions' },
+  { client: 'telkom', logo: 'images/clients/telkom-kenya.webp', name: 'Telkom Kenya', tag: 'Leading telecommunications' },
+  { client: 'uip-real-estate', logo: 'images/clients/uip_real_estate.jfif', name: 'UIP Real Estate', tag: 'Trusted real estate' },
+  { client: 'rachier-and-amollo', logo: 'images/clients/rachier_and_amollo.png', name: 'Rachier & Amollo', tag: 'Result‑oriented law firm' },
+  { client: 'sistema-bio', logo: 'images/clients/sistema_bio.png', name: 'Sistema Bio', tag: 'Biodigester solutions' }
+];
+
+function createClientItem(data) {
+  return `
+    <div class="clientele__item" data-client="${data.client}">
+      <div class="clientele__card-content">
+        <img src="${data.logo}" alt="${data.name} logo" loading="lazy" />
+        <span>${data.name}</span>
+        <p class="clientele__tagline">${data.tag}</p>
+      </div>
+      <div class="clientele__overlay">
+        <button class="clientele__btn" data-client="${data.client}">View Work <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>`;
+}
+
+function buildClientTrack() {
+  const items = originalClients.map(createClientItem).join('');
+  clientTrack.innerHTML = items + items;
+  attachClientListeners();
+}
+buildClientTrack();
+
+function attachClientListeners() {
+  document.querySelectorAll('.clientele__item').forEach(item => {
+    item.addEventListener('click', (e) => {
+      if (e.target.closest('.clientele__btn')) return;
+      const clientId = item.dataset.client;
+      if (clientId && clienteleData[clientId]) {
+        window.location.hash = `clientele-${clientId}`;
+        renderDetail(clientId, 'clientele');
+      }
+    });
+  });
+  document.querySelectorAll('.clientele__btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const clientId = btn.dataset.client;
+      if (clientId && clienteleData[clientId]) {
+        window.location.hash = `clientele-${clientId}`;
+        renderDetail(clientId, 'clientele');
+      }
+    });
+  });
+}
+
+// ===== RENDER DETAIL VIEW =====
 function renderDetail(id, type) {
-  let data;
-  let backSection = '#services';
-  if (type === 'clientele') {
-    data = clienteleData[id];
-    backSection = '#clientele';
-  } else {
-    data = serviceData[id];
-    backSection = '#services';
-  }
-  if (!data) {
-    console.warn('No data found for:', id);
-    return;
-  }
-  returnSectionId = backSection;
+  const data = type === 'clientele' ? clienteleData[id] : serviceData[id];
+  if (!data) return;
+  returnSectionId = type === 'clientele' ? '#clientele' : '#services';
 
-  const statsHTML = data.stats.map(stat =>
-    `<div class="stat"><span>${stat.number}</span><label>${stat.label}</label></div>`
-  ).join('');
+  const statsHTML = data.stats
+    .map(s => `<div class="stat"><span>${s.number}</span><label>${s.label}</label></div>`)
+    .join('');
 
-  const galleryHTML = data.gallery.map(img =>
-    `<img src="${img}" alt="${data.title} project" loading="lazy" />`
-  ).join('');
+  const galleryHTML = (data.gallery && data.gallery.length > 0)
+    ? data.gallery.map(img => `
+        <div class="gallery-item">
+          <div class="gallery-shimmer"></div>
+          <img src="${img}" alt="${data.title}" loading="lazy" onload="this.classList.add('loaded')" />
+        </div>`).join('')
+    : '<p style="text-align:center;color:var(--color-gray);">Gallery coming soon.</p>';
 
   detailContainer.innerHTML = `
-    <div class="detail-hero" style="background-image: url('${data.heroImage}')">
-      <div class="detail-hero-overlay"></div>
+    <div class="detail-hero" style="background-image:url('${data.heroImage}')">
       <div class="container detail-hero-content">
         <h1>${data.title}</h1>
         <p>${data.description}</p>
       </div>
     </div>
     <div class="container detail-body">
-      <div class="detail-stats">
-        ${statsHTML}
-      </div>
+      <div class="detail-stats">${statsHTML}</div>
       <h2>Project Gallery</h2>
-      <div class="detail-gallery">
-        ${galleryHTML}
-      </div>
-    </div>
-  `;
+      <div class="detail-gallery">${galleryHTML}</div>
+    </div>`;
 
   detailSection.classList.add('active');
   mainContent.style.display = 'none';
   body.classList.add('detail-active');
-  detailSection.scrollTop = 0;
   window.scrollTo(0, 0);
 }
 
@@ -358,29 +254,23 @@ function hideDetail() {
   detailSection.classList.remove('active');
   mainContent.style.display = 'block';
   body.classList.remove('detail-active');
-  if (window.location.hash) {
-    history.pushState(null, null, ' ');
-  }
-  const targetElement = document.querySelector(returnSectionId);
-  if (targetElement) {
-    const offset = 80;
-    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+  history.pushState(null, null, ' ');
+  const target = document.querySelector(returnSectionId);
+  if (target) {
+    window.scrollTo({
+      top: target.getBoundingClientRect().top + window.scrollY - 80,
+      behavior: 'smooth'
+    });
   } else {
     window.scrollTo(0, 0);
   }
 }
 
 backBtn.addEventListener('click', hideDetail);
-
 logoLink.addEventListener('click', (e) => {
   e.preventDefault();
-  if (detailSection.classList.contains('active')) {
-    hideDetail();
-  } else {
-    window.scrollTo(0, 0);
-    window.location.hash = '';
-  }
+  if (detailSection.classList.contains('active')) hideDetail();
+  else window.scrollTo(0, 0);
 });
 
 // ===== HASH ROUTING =====
@@ -388,417 +278,44 @@ function handleHashChange() {
   const hash = window.location.hash;
   if (hash.startsWith('#service-')) {
     const id = hash.replace('#service-', '');
-    if (serviceData[id]) {
-      renderDetail(id, 'service');
-      return;
-    }
+    if (serviceData[id]) renderDetail(id, 'service');
   } else if (hash.startsWith('#clientele-')) {
     const id = hash.replace('#clientele-', '');
-    if (clienteleData[id]) {
-      renderDetail(id, 'clientele');
-      return;
-    }
-  }
-  if (detailSection.classList.contains('active')) {
+    if (clienteleData[id]) renderDetail(id, 'clientele');
+  } else if (detailSection.classList.contains('active')) {
     hideDetail();
   }
 }
 window.addEventListener('hashchange', handleHashChange);
 
-// ===== CLICK HANDLERS =====
+// ===== SERVICE CARD CLICKS =====
 document.querySelectorAll('.services__card').forEach(card => {
   card.addEventListener('click', (e) => {
     if (e.target.closest('.services__card-btn')) return;
-    const serviceId = card.dataset.service;
-    if (serviceId && serviceData[serviceId]) {
-      window.location.hash = `service-${serviceId}`;
-      renderDetail(serviceId, 'service');
+    const id = card.dataset.service;
+    if (serviceData[id]) {
+      window.location.hash = `service-${id}`;
+      renderDetail(id, 'service');
     }
   });
 });
 document.querySelectorAll('.services__card-btn').forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
-    const serviceId = btn.dataset.service;
-    if (serviceId && serviceData[serviceId]) {
-      window.location.hash = `service-${serviceId}`;
-      renderDetail(serviceId, 'service');
-    }
-  });
-});
-document.querySelectorAll('.clientele__item').forEach(item => {
-  item.addEventListener('click', (e) => {
-    if (e.target.closest('.clientele__btn')) return;
-    const clientId = item.dataset.client;
-    if (clientId && clienteleData[clientId]) {
-      window.location.hash = `clientele-${clientId}`;
-      renderDetail(clientId, 'clientele');
-    }
-  });
-});
-document.querySelectorAll('.clientele__btn').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const clientId = btn.dataset.client;
-    if (clientId && clienteleData[clientId]) {
-      window.location.hash = `clientele-${clientId}`;
-      renderDetail(clientId, 'clientele');
+    const id = btn.dataset.service;
+    if (serviceData[id]) {
+      window.location.hash = `service-${id}`;
+      renderDetail(id, 'service');
     }
   });
 });
 
-// ===== PRELOADER =====
-window.addEventListener('load', () => {
-  document.getElementById('preloader').classList.add('hidden');
-  if (window.location.hash) {
-    handleHashChange();
-  }
-});
-
-// ===== SCROLL PROGRESS =====
-const progressBar = document.getElementById('scrollProgress');
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  progressBar.style.width = (scrollTop / docHeight) * 100 + '%';
-});
-
-// ===== HEADER SCROLL =====
-const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 80);
-});
-
-// ===== ACTIVE NAV LINK =====
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav__link');
-function updateActiveLink() {
-  let current = '';
-  const scrollPosition = window.scrollY + 100;
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-      current = section.getAttribute('id');
-    }
-  });
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === '#' + current) {
-      link.classList.add('active');
-    }
-  });
-}
-window.addEventListener('scroll', updateActiveLink);
-window.addEventListener('load', updateActiveLink);
-window.addEventListener('hashchange', updateActiveLink);
-
-// ===== NAV TOGGLE =====
-const navToggle = document.getElementById('navToggle');
-const navList = document.querySelector('.nav__list');
-navToggle.addEventListener('click', () => {
-  const isOpen = navList.classList.toggle('open');
-  navToggle.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', isOpen);
-});
-document.querySelectorAll('.nav__link').forEach(link => {
-  link.addEventListener('click', () => {
-    navList.classList.remove('open');
-    navToggle.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
-});
-
-// ===== CAROUSEL =====
-let currentSlide = 0;
-const slides = document.querySelectorAll('.hero__slide');
-const dots = document.querySelectorAll('.hero__dots .dot');
-function showSlide(index) {
-  slides.forEach((s, i) => s.classList.toggle('active', i === index));
-  dots.forEach((d, i) => d.classList.toggle('active', i === index));
-}
-dots.forEach(dot => {
-  dot.addEventListener('click', () => {
-    currentSlide = parseInt(dot.dataset.slide);
-    showSlide(currentSlide);
-  });
-});
-setInterval(() => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}, 5000);
-
-// ===== COUNTER ANIMATION =====
-function animateCounter(element, target, duration = 2500) {
-  const start = 0;
-  const startTime = performance.now();
-  function updateCounter(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const current = Math.floor(eased * target);
-    element.textContent = current + '+';
-    if (progress < 1) {
-      requestAnimationFrame(updateCounter);
-    } else {
-      element.textContent = target + '+';
-    }
-  }
-  requestAnimationFrame(updateCounter);
-}
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const target = entry.target;
-      const count = parseInt(target.dataset.count);
-      animateCounter(target, count, 2500);
-      counterObserver.unobserve(target);
-    }
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('.about__stat-number').forEach(c => {
-  counterObserver.observe(c);
-});
-
-// ===== SCROLL REVEAL =====
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('section-visible');
-    }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.about, .services, .clientele, .testimonials, .contact').forEach(section => {
-  section.classList.add('section-hidden');
-  sectionObserver.observe(section);
-});
-
-// ===== SERVICE CARD STAGGER =====
-const serviceCards = document.querySelectorAll('.services__card');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, index) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), index * 80);
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
-serviceCards.forEach(card => revealObserver.observe(card));
-
-// ===== FILTER =====
-const filterBtns = document.querySelectorAll('.filter__btn');
-const servicesGrid = document.getElementById('servicesGrid');
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    const cards = servicesGrid.querySelectorAll('.services__card');
-    cards.forEach(card => {
-      const category = card.dataset.category;
-      if (filter === 'all' || category === filter) {
-        card.classList.remove('hidden-card');
-        card.classList.remove('visible');
-        setTimeout(() => card.classList.add('visible'), 50);
-      } else {
-        card.classList.add('hidden-card');
-        card.classList.remove('visible');
-      }
-    });
-  });
-});
-
-// ===== 3D TILT =====
-document.querySelectorAll('.services__card, .clientele__item').forEach(el => {
-  el.addEventListener('mousemove', (e) => {
-    const rect = el.getBoundingClientRect();
-    const x = e.clientX - rect.left, y = e.clientY - rect.top;
-    const rotateX = (y - rect.height / 2) / 20, rotateY = (rect.width / 2 - x) / 20;
-    el.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-  });
-  el.addEventListener('mouseleave', () => {
-    el.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)';
-  });
-});
-
-// ===== PARALLAX HERO =====
-window.addEventListener('scroll', function() {
-  const scrollY = window.scrollY;
-  const heroSlides = document.querySelectorAll('.hero__slide');
-  if (heroSlides.length > 0 && scrollY < window.innerHeight) {
-    const offset = scrollY * 0.15;
-    heroSlides.forEach(slide => {
-      slide.style.transform = `translateY(${offset * 0.3}px) scale(1.05)`;
-    });
-  }
-});
-
-// ===== FLOATING CTA =====
-let lastScrollY = window.scrollY;
-const cta = document.getElementById('floatingCta');
-window.addEventListener('scroll', function() {
-  const currentScrollY = window.scrollY;
-  if (currentScrollY > lastScrollY && currentScrollY > 300) {
-    cta.style.transform = 'translateY(80px)';
-    cta.style.opacity = '0';
-  } else {
-    cta.style.transform = 'translateY(0)';
-    cta.style.opacity = '1';
-  }
-  lastScrollY = currentScrollY;
-});
-cta.addEventListener('click', function(e) {
-  e.preventDefault();
-  const target = document.querySelector(this.getAttribute('href'));
-  if (target) {
-    const offset = 80;
-    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-  }
-});
-
-// ===== TOAST =====
-function showToast(message, type = 'success') {
-  const container = document.getElementById('toastContainer');
-  const toast = document.createElement('div');
-  toast.className = `toast ${type}`;
-  const icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
-  toast.innerHTML = `<i class="fas ${icon}"></i> ${message}`;
-  container.appendChild(toast);
-  setTimeout(() => {
-    toast.classList.add('fade-out');
-    setTimeout(() => toast.remove(), 300);
-  }, 4000);
-}
-
-// ===== CONTACT FORM =====
-const form = document.getElementById('contactForm');
-const serviceLabels = {
-  'vehicle-branding': 'Vehicle Branding',
-  'shop-branding': 'Shop Branding',
-  'signages': 'Signages',
-  'wall-branding': 'Wall Branding',
-  'office-branding': 'Office Branding',
-  'printing-design': 'Printing & Design',
-  'merchandise-branding': 'Merchandise Branding',
-  'experiential-promotions': 'Experiential Promotions',
-  'branding-strategy': 'Branding Strategy',
-  'general-inquiry': 'General Inquiry'
-};
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const service = document.getElementById('service').value;
-  const message = document.getElementById('message').value.trim();
-
-  if (!name || !email || !service || !message) {
-    showToast('Please fill in all required fields.', 'error');
-    return;
-  }
-  if (!email.includes('@') || !email.includes('.')) {
-    showToast('Please enter a valid email address.', 'error');
-    return;
-  }
-  const serviceName = serviceLabels[service] || service;
-  console.log(`=== New Inquiry ===\nName: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nService: ${serviceName}\nMessage: ${message}`);
-  showToast('Sending your message...', 'success');
-  setTimeout(() => {
-    showToast(`Thank you ${name}! We've received your inquiry about ${serviceName}. We'll get back to you soon.`, 'success');
-    form.reset();
-  }, 1500);
-});
-
-// ===== SCROLL TOP =====
-const scrollTopBtn = document.getElementById('scrollTop');
-window.addEventListener('scroll', () => {
-  scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
-});
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// ===== COOKIE CONSENT =====
-const CONSENT_COOKIE = 'cookie_consent';
-function setCookie(name, value, days = 365) {
-  const expiry = new Date();
-  expiry.setDate(expiry.getDate() + days);
-  document.cookie = `${name}=${value}; expires=${expiry.toUTCString()}; path=/; SameSite=Lax; Secure`;
-}
-function getCookie(name) {
-  const decoded = decodeURIComponent(document.cookie);
-  const arr = decoded.split('; ');
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].indexOf(`${name}=`) === 0) {
-      return arr[i].substring(name.length + 1);
-    }
-  }
-  return null;
-}
-function deleteCookie(name) {
-  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-}
-function getConsentStatus() {
-  const cookieVal = getCookie(CONSENT_COOKIE);
-  if (cookieVal) return cookieVal;
-  const localVal = localStorage.getItem(CONSENT_COOKIE);
-  if (localVal) {
-    setCookie(CONSENT_COOKIE, localVal);
-    return localVal;
-  }
-  return null;
-}
-function saveConsent(status) {
-  setCookie(CONSENT_COOKIE, status);
-  localStorage.setItem(CONSENT_COOKIE, status);
-}
-function acceptAll() {
-  saveConsent('accepted');
-  document.getElementById('cookieBanner').classList.remove('active');
-  showToast('Cookies accepted.', 'success');
-}
-function decline() {
-  saveConsent('declined');
-  document.getElementById('cookieBanner').classList.remove('active');
-  showToast('Cookies declined.', 'success');
-}
-function showBanner() {
-  setTimeout(() => {
-    document.getElementById('cookieBanner').classList.add('active');
-  }, 800);
-}
-const consentStatus = getConsentStatus();
-if (!consentStatus) {
-  showBanner();
-}
-document.getElementById('cookieAccept').addEventListener('click', acceptAll);
-document.getElementById('cookieDecline').addEventListener('click', decline);
-const preferencesLink = document.getElementById('cookiePreferencesLink');
-if (preferencesLink) {
-  preferencesLink.addEventListener('click', function(e) {
-    e.preventDefault();
-    deleteCookie(CONSENT_COOKIE);
-    localStorage.removeItem(CONSENT_COOKIE);
-    showBanner();
-    showToast('Cookie preferences reset. Please make your choice.', 'success');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
-document.getElementById('cookieLearnMore').addEventListener('click', function(e) {
-  e.preventDefault();
-  showToast('Privacy Policy: We use cookies to improve your experience.', 'success');
-});
-
-// ============================================================
-// LIGHTBOX GALLERY
-// ============================================================
+// ===== LIGHTBOX GALLERY =====
 (function() {
   const state = {
     images: [],
     currentIndex: 0,
     isOpen: false,
-    isFullscreen: false,
     scale: 1,
     minScale: 0.5,
     maxScale: 4,
@@ -810,140 +327,75 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     startTranslateX: 0,
     startTranslateY: 0,
     startScale: 1,
-    lastTouchDist: 0,
+    lastTouchDist: 0
   };
-  let lightbox = null;
-  let imageEl = null;
-  let wrapperEl = null;
-  let counterEl = null;
-  let zoomLevelEl = null;
-  let fullscreenBtn = null;
+  let lightbox, imageEl, wrapperEl, counterEl, zoomLevelEl;
 
   function createLightbox() {
     if (document.getElementById('lightbox')) return;
     const html = `
-      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery">
+      <div class="lightbox" id="lightbox">
         <div class="lightbox__overlay"></div>
-        <button class="lightbox__close" aria-label="Close gallery" title="Close (ESC)"><i class="fas fa-times"></i></button>
+        <button class="lightbox__close" title="Close (ESC)"><i class="fas fa-times"></i></button>
         <div class="lightbox__counter" id="lightboxCounter"></div>
-        <div class="lightbox__controls-right">
-          <button class="lightbox__fullscreen" id="lightboxFullscreen" aria-label="Toggle fullscreen" title="Fullscreen (F)"><i class="fas fa-expand"></i></button>
-          <button class="lightbox__share" aria-label="Share image" title="Share image"><i class="fas fa-arrow-up-from-bracket"></i></button>
-        </div>
+        <button class="lightbox__prev" title="Previous (←)"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox__next" title="Next (→)"><i class="fas fa-chevron-right"></i></button>
         <div class="lightbox__container">
           <div class="lightbox__image-wrapper" id="lightboxWrapper">
             <img src="" alt="Gallery image" id="lightboxImage" />
           </div>
         </div>
-        <button class="lightbox__prev" aria-label="Previous image" title="Previous (←)"><i class="fas fa-chevron-left"></i></button>
-        <button class="lightbox__next" aria-label="Next image" title="Next (→)"><i class="fas fa-chevron-right"></i></button>
         <div class="lightbox__zoom-controls">
-          <button class="lightbox__zoom-out" aria-label="Zoom out" title="Zoom out"><i class="fas fa-minus"></i></button>
+          <button class="lightbox__zoom-out" title="Zoom out"><i class="fas fa-minus"></i></button>
           <span class="lightbox__zoom-level" id="lightboxZoomLevel">100%</span>
-          <button class="lightbox__zoom-in" aria-label="Zoom in" title="Zoom in"><i class="fas fa-plus"></i></button>
-          <button class="lightbox__zoom-reset" aria-label="Reset zoom" title="Reset zoom"><i class="fas fa-expand"></i></button>
+          <button class="lightbox__zoom-in" title="Zoom in"><i class="fas fa-plus"></i></button>
+          <button class="lightbox__zoom-reset" title="Reset zoom"><i class="fas fa-expand"></i></button>
         </div>
         <div class="lightbox__dots" id="lightboxDots"></div>
-      </div>
-    `;
+      </div>`;
     document.body.insertAdjacentHTML('beforeend', html);
     lightbox = document.getElementById('lightbox');
     imageEl = document.getElementById('lightboxImage');
     wrapperEl = document.getElementById('lightboxWrapper');
     counterEl = document.getElementById('lightboxCounter');
     zoomLevelEl = document.getElementById('lightboxZoomLevel');
-    fullscreenBtn = document.getElementById('lightboxFullscreen');
 
-    lightbox.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
-    lightbox.querySelector('.lightbox__prev').addEventListener('click', prevImage);
-    lightbox.querySelector('.lightbox__next').addEventListener('click', nextImage);
-    lightbox.querySelector('.lightbox__share').addEventListener('click', shareImage);
+    lightbox.querySelector('.lightbox__close').addEventListener('click', close);
+    lightbox.querySelector('.lightbox__prev').addEventListener('click', () => goTo(state.currentIndex - 1));
+    lightbox.querySelector('.lightbox__next').addEventListener('click', () => goTo(state.currentIndex + 1));
     lightbox.querySelector('.lightbox__zoom-in').addEventListener('click', zoomIn);
     lightbox.querySelector('.lightbox__zoom-out').addEventListener('click', zoomOut);
     lightbox.querySelector('.lightbox__zoom-reset').addEventListener('click', resetZoom);
-    fullscreenBtn.addEventListener('click', toggleFullscreen);
-    document.addEventListener('keydown', handleKeydown);
+    lightbox.querySelector('.lightbox__overlay').addEventListener('click', close);
 
-    wrapperEl.addEventListener('mousedown', onDragStart);
-    document.addEventListener('mousemove', onDragMove);
-    document.addEventListener('mouseup', onDragEnd);
-
-    wrapperEl.addEventListener('touchstart', onTouchStart, { passive: false });
-    wrapperEl.addEventListener('touchmove', onTouchMove, { passive: false });
-    wrapperEl.addEventListener('touchend', onTouchEnd, { passive: false });
-    wrapperEl.addEventListener('wheel', onWheel, { passive: false });
-    lightbox.querySelector('.lightbox__overlay').addEventListener('click', closeLightbox);
-
-    lightbox.addEventListener('click', function(e) {
-      const dot = e.target.closest('.lightbox__dot');
-      if (dot) {
-        const index = parseInt(dot.dataset.index);
-        if (!isNaN(index)) goToImage(index);
-      }
+    document.addEventListener('keydown', (e) => {
+      if (!state.isOpen) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(state.currentIndex - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); goTo(state.currentIndex + 1); }
     });
+
+    wrapperEl.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      state.scale = Math.min(Math.max(state.scale * (e.deltaY > 0 ? 0.9 : 1.1), state.minScale), state.maxScale);
+      applyTransform();
+    });
+
     imageEl.addEventListener('load', function() {
       wrapperEl.classList.remove('loading');
       this.classList.add('loaded');
     });
     imageEl.addEventListener('error', function() {
       wrapperEl.classList.remove('loading');
-      this.alt = 'Image failed to load';
-      this.classList.add('loaded');
     });
 
-    document.addEventListener('fullscreenchange', onFullscreenChange);
-    document.addEventListener('webkitfullscreenchange', onFullscreenChange);
-    document.addEventListener('mozfullscreenchange', onFullscreenChange);
-    document.addEventListener('MSFullscreenChange', onFullscreenChange);
+    lightbox.addEventListener('click', function(e) {
+      const dot = e.target.closest('.lightbox__dot');
+      if (dot) goTo(parseInt(dot.dataset.index));
+    });
   }
 
-  function getFullscreenElement() {
-    return document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
-  }
-  function requestFullscreen() {
-    const el = lightbox;
-    if (el.requestFullscreen) el.requestFullscreen();
-    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-    else if (el.mozRequestFullScreen) el.mozRequestFullScreen();
-    else if (el.msRequestFullscreen) el.msRequestFullscreen();
-    else {
-      lightbox.style.position = 'fixed';
-      lightbox.style.inset = '0';
-      lightbox.style.width = '100vw';
-      lightbox.style.height = '100vh';
-      state.isFullscreen = true;
-      updateFullscreenIcon();
-    }
-  }
-  function exitFullscreen() {
-    if (document.exitFullscreen) document.exitFullscreen();
-    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-    else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
-    else if (document.msExitFullscreen) document.msExitFullscreen();
-    else {
-      lightbox.style.position = '';
-      lightbox.style.inset = '';
-      lightbox.style.width = '';
-      lightbox.style.height = '';
-      state.isFullscreen = false;
-      updateFullscreenIcon();
-    }
-  }
-  function toggleFullscreen() {
-    if (state.isFullscreen || getFullscreenElement()) exitFullscreen();
-    else requestFullscreen();
-  }
-  function onFullscreenChange() {
-    state.isFullscreen = !!getFullscreenElement();
-    updateFullscreenIcon();
-  }
-  function updateFullscreenIcon() {
-    if (!fullscreenBtn) return;
-    const icon = fullscreenBtn.querySelector('i');
-    icon.className = state.isFullscreen ? 'fas fa-compress' : 'fas fa-expand';
-  }
-
-  function openLightbox(index) {
+  function open(index) {
     if (!state.images.length) return;
     createLightbox();
     state.isOpen = true;
@@ -951,32 +403,26 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     state.scale = 1;
     state.translateX = 0;
     state.translateY = 0;
-    state.isFullscreen = false;
     wrapperEl.classList.add('loading');
-    imageEl.classList.remove('loaded');
     imageEl.src = state.images[state.currentIndex];
     imageEl.alt = 'Gallery image ' + (state.currentIndex + 1);
     updateCounter();
     updateDots();
     updateZoomLevel();
-    updateFullscreenIcon();
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
-    preloadImage(state.currentIndex + 1);
-    preloadImage(state.currentIndex - 1);
   }
-  function closeLightbox() {
+
+  function close() {
     state.isOpen = false;
-    if (state.isFullscreen || getFullscreenElement()) exitFullscreen();
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
     state.scale = 1;
-    state.translateX = 0;
-    state.translateY = 0;
-    imageEl.style.transform = 'scale(1) translate(0, 0)';
+    imageEl.style.transform = '';
     wrapperEl.classList.remove('loading');
   }
-  function goToImage(index) {
+
+  function goTo(index) {
     if (index < 0) index = state.images.length - 1;
     if (index >= state.images.length) index = 0;
     state.currentIndex = index;
@@ -984,177 +430,191 @@ document.getElementById('cookieLearnMore').addEventListener('click', function(e)
     state.translateX = 0;
     state.translateY = 0;
     wrapperEl.classList.add('loading');
-    imageEl.classList.remove('loaded');
     imageEl.src = state.images[index];
     imageEl.alt = 'Gallery image ' + (index + 1);
     updateCounter();
     updateDots();
     updateZoomLevel();
-    preloadImage(index + 1);
-    preloadImage(index - 1);
   }
-  function nextImage() { goToImage(state.currentIndex + 1); }
-  function prevImage() { goToImage(state.currentIndex - 1); }
-  function preloadImage(index) {
-    if (index < 0 || index >= state.images.length) return;
-    const img = new Image();
-    img.src = state.images[index];
-  }
+
   function updateCounter() {
     if (counterEl) counterEl.textContent = `${state.currentIndex + 1} / ${state.images.length}`;
   }
+
   function updateDots() {
     const dotsContainer = document.getElementById('lightboxDots');
-    if (!dotsContainer) return;
-    if (state.images.length <= 1) {
-      dotsContainer.innerHTML = '';
+    if (!dotsContainer || state.images.length <= 1) {
+      if (dotsContainer) dotsContainer.innerHTML = '';
       return;
     }
-    let html = '';
-    for (let i = 0; i < state.images.length; i++) {
-      html += `<span class="lightbox__dot ${i === state.currentIndex ? 'active' : ''}" data-index="${i}"></span>`;
-    }
-    dotsContainer.innerHTML = html;
+    dotsContainer.innerHTML = state.images
+      .map((_, i) => `<span class="lightbox__dot ${i === state.currentIndex ? 'active' : ''}" data-index="${i}"></span>`)
+      .join('');
   }
+
   function updateZoomLevel() {
     if (zoomLevelEl) zoomLevelEl.textContent = Math.round(state.scale * 100) + '%';
   }
+
   function applyTransform() {
-    if (!imageEl) return;
-    imageEl.style.transform = `scale(${state.scale}) translate(${state.translateX}px, ${state.translateY}px)`;
+    if (imageEl) imageEl.style.transform = `scale(${state.scale}) translate(${state.translateX}px, ${state.translateY}px)`;
     updateZoomLevel();
   }
-  function zoomIn() {
-    const newScale = Math.min(state.scale * 1.25, state.maxScale);
-    if (newScale !== state.scale) { state.scale = newScale; applyTransform(); }
-  }
-  function zoomOut() {
-    const newScale = Math.max(state.scale / 1.25, state.minScale);
-    if (newScale !== state.scale) { state.scale = newScale; applyTransform(); }
-  }
-  function resetZoom() { state.scale = 1; state.translateX = 0; state.translateY = 0; applyTransform(); }
-  function shareImage() {
-    const url = state.images[state.currentIndex];
-    if (navigator.share) {
-      navigator.share({ title: 'Broad Experiential - Project Gallery', text: 'Check out this project!', url }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(url).then(() => showToast('Image URL copied!', 'success')).catch(() => fallbackCopy(url));
-    }
-  }
-  function fallbackCopy(text) {
-    const input = document.createElement('input');
-    input.value = text;
-    input.style.position = 'fixed';
-    input.style.opacity = '0';
-    document.body.appendChild(input);
-    input.select();
-    try { document.execCommand('copy'); showToast('Image URL copied!', 'success'); } catch (e) { showToast('Unable to copy.', 'error'); }
-    document.body.removeChild(input);
-  }
 
-  function onDragStart(e) {
-    if (state.scale <= 1) return;
-    state.isDragging = true;
-    state.startX = e.clientX;
-    state.startY = e.clientY;
-    state.startTranslateX = state.translateX;
-    state.startTranslateY = state.translateY;
-    wrapperEl.style.cursor = 'grabbing';
-  }
-  function onDragMove(e) {
-    if (!state.isDragging) return;
-    const dx = e.clientX - state.startX;
-    const dy = e.clientY - state.startY;
-    const img = imageEl;
-    if (!img) return;
-    const rect = img.getBoundingClientRect();
-    const containerRect = wrapperEl.getBoundingClientRect();
-    const maxX = Math.max(0, (rect.width * state.scale - containerRect.width) / 2);
-    const maxY = Math.max(0, (rect.height * state.scale - containerRect.height) / 2);
-    state.translateX = Math.min(maxX, Math.max(-maxX, state.startTranslateX + dx));
-    state.translateY = Math.min(maxY, Math.max(-maxY, state.startTranslateY + dy));
+  function zoomIn() {
+    state.scale = Math.min(state.scale * 1.25, state.maxScale);
     applyTransform();
   }
-  function onDragEnd() { state.isDragging = false; if (wrapperEl) wrapperEl.style.cursor = ''; }
 
-  function onTouchStart(e) {
-    if (e.touches.length === 2) {
-      const t1 = e.touches[0], t2 = e.touches[1];
-      state.lastTouchDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
-      state.startScale = state.scale;
-    } else if (e.touches.length === 1 && state.scale > 1) {
-      state.isDragging = true;
-      state.startX = e.touches[0].clientX;
-      state.startY = e.touches[0].clientY;
-      state.startTranslateX = state.translateX;
-      state.startTranslateY = state.translateY;
-    }
+  function zoomOut() {
+    state.scale = Math.max(state.scale / 1.25, state.minScale);
+    applyTransform();
   }
-  function onTouchMove(e) {
+
+  function resetZoom() {
+    state.scale = 1;
+    state.translateX = 0;
+    state.translateY = 0;
+    applyTransform();
+  }
+
+  // Attach lightbox to gallery images
+  detailContainer.addEventListener('click', function(e) {
+    const img = e.target.closest('.detail-gallery img');
+    if (!img) return;
+    const gallery = img.closest('.detail-gallery');
+    if (!gallery) return;
+    const allImages = Array.from(gallery.querySelectorAll('img')).map(el => el.src);
+    const index = allImages.indexOf(img.src);
+    if (index === -1) return;
+    state.images = allImages;
+    open(index);
+  });
+})();
+
+// ===== FORM VALIDATION =====
+const form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (e.touches.length === 2) {
-      const t1 = e.touches[0], t2 = e.touches[1];
-      const dist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
-      const newScale = Math.min(Math.max(state.startScale * (dist / state.lastTouchDist), state.minScale), state.maxScale);
-      if (newScale !== state.scale) { state.scale = newScale; applyTransform(); }
-    } else if (e.touches.length === 1 && state.isDragging) {
-      const dx = e.touches[0].clientX - state.startX;
-      const dy = e.touches[0].clientY - state.startY;
-      const img = imageEl;
-      if (!img) return;
-      const rect = img.getBoundingClientRect();
-      const containerRect = wrapperEl.getBoundingClientRect();
-      const maxX = Math.max(0, (rect.width * state.scale - containerRect.width) / 2);
-      const maxY = Math.max(0, (rect.height * state.scale - containerRect.height) / 2);
-      state.translateX = Math.min(maxX, Math.max(-maxX, state.startTranslateX + dx));
-      state.translateY = Math.min(maxY, Math.max(-maxY, state.startTranslateY + dy));
-      applyTransform();
-    }
-  }
-  function onTouchEnd() { state.isDragging = false; state.lastTouchDist = 0; }
-  function onWheel(e) { e.preventDefault(); const delta = e.deltaY > 0 ? 0.9 : 1.1; state.scale = Math.min(Math.max(state.scale * delta, state.minScale), state.maxScale); applyTransform(); }
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value.trim();
+    if (!name || !email || !service || !message) return showToast('Please fill all required fields.', 'error');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return showToast('Invalid email address.', 'error');
+    showToast('Message sent successfully!', 'success');
+    form.reset();
+  });
+}
 
-  function handleKeydown(e) {
-    if (!state.isOpen) return;
-    switch (e.key) {
-      case 'Escape': closeLightbox(); break;
-      case 'ArrowLeft': e.preventDefault(); prevImage(); break;
-      case 'ArrowRight': e.preventDefault(); nextImage(); break;
-      case '+': case '=': e.preventDefault(); zoomIn(); break;
-      case '-': e.preventDefault(); zoomOut(); break;
-      case '0': e.preventDefault(); resetZoom(); break;
-      case 'f': case 'F': e.preventDefault(); toggleFullscreen(); break;
+// ===== COUNTER ANIMATION =====
+function animateCounter(el, target) {
+  let current = 0;
+  const step = () => {
+    if (current < target) {
+      current++;
+      el.textContent = current + '+';
+      requestAnimationFrame(step);
+    } else {
+      el.classList.add('bounced');
     }
-  }
-
-  window.lightbox = {
-    open: openLightbox,
-    close: closeLightbox,
-    setImages(images) { state.images = images || []; },
-    next: nextImage,
-    prev: prevImage,
-    zoomIn, zoomOut, resetZoom,
-    toggleFullscreen,
-    isFullscreen: () => state.isFullscreen || !!getFullscreenElement(),
   };
+  step();
+}
 
-  // Auto‑setup gallery clicks in detail view
-  function setupGalleryLightbox() {
-    detailContainer.addEventListener('click', function(e) {
-      const img = e.target.closest('.detail-gallery img');
-      if (img) {
-        const gallery = img.closest('.detail-gallery');
-        if (gallery) {
-          const allImages = Array.from(gallery.querySelectorAll('img')).map(el => el.src);
-          const index = allImages.indexOf(img.src);
-          if (index !== -1) {
-            window.lightbox.setImages(allImages);
-            window.lightbox.open(index);
-          }
-        }
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const count = parseInt(entry.target.dataset.count);
+      animateCounter(entry.target, count);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.about__stat-number').forEach(c => counterObserver.observe(c));
+
+// ===== SCROLL REVEAL =====
+const revealSections = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('section-visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.about, .services, .clientele, .testimonials, .contact').forEach(s => {
+  s.classList.add('section-hidden');
+  revealSections.observe(s);
+});
+
+// ===== SERVICE CARD STAGGER =====
+document.querySelectorAll('.services__card').forEach((card, i) => {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        obs.unobserve(entry.target);
       }
     });
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setupGalleryLightbox);
-  else setupGalleryLightbox();
-})();
+  }, { threshold: 0.15 });
+  obs.observe(card);
+});
+
+// ===== FILTER =====
+document.querySelectorAll('.filter__btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter__btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.services__card').forEach(card => {
+      card.classList.toggle('hidden-card', filter !== 'all' && card.dataset.category !== filter);
+    });
+  });
+});
+
+// ===== NAV TOGGLE =====
+const navToggle = document.getElementById('navToggle');
+const navList = document.querySelector('.nav__list');
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navList.classList.toggle('open');
+    navToggle.classList.toggle('open');
+  });
+}
+
+// ===== SCROLL TOP =====
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  if (scrollTopBtn) scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+});
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+// ===== PRELOADER =====
+window.addEventListener('load', () => {
+  document.getElementById('preloader').classList.add('hidden');
+  if (window.location.hash) handleHashChange();
+});
+
+// ===== HEADER SCROLL =====
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 80));
+
+// ===== HERO CAROUSEL =====
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero__slide');
+setInterval(() => {
+  slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+  currentSlide = (currentSlide + 1) % slides.length;
+}, 5000);
+
+// ===== TOAST =====
+function showToast(msg, type = 'success') {
+  const container = document.getElementById('toastContainer');
+  const toast = document.createElement('div');
+  toast.className = `toast ${type}`;
+  toast.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${msg}`;
+  container.appendChild(toast);
+  setTimeout(() => toast.remove(), 4000);
+}
