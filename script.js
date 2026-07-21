@@ -67,16 +67,31 @@ const serviceData = {
   'merchandise-branding': {
     title: 'Merchandise Branding',
     description: 'Custom-branded merchandise that keeps your brand top-of-mind.',
-    heroImage: 'https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=1200&q=80',
+    heroImage: 'images/merch/merch_2.jpg',
     stats: [{ number: '50k+', label: 'Items Produced' }],
-    gallery: ['https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=600&q=80']
+    gallery: ['images/merch/merch_4.jpg',
+      'images/merch/merch_3.jpg',
+      'images/merch/merch_1.jpg',
+    ]
   },
   'experiential-promotions': {
     title: 'Experiential Promotions',
     description: 'Immersive brand activations that create unforgettable connections.',
-    heroImage: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?w=1200&q=80',
+    heroImage: 'images/experiential_promotions/captain_morgan.jpg',
     stats: [{ number: '80+', label: 'Events Executed' }],
-    gallery: ['https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600&q=80']
+    gallery: ['images/experiential_promotions/tusker_1.jpg',
+      'images/experiential_promotions/tusker_2.jpg',
+      'images/experiential_promotions/tusker_3.jpg',
+      'images/experiential_promotions/exp_1.jpg',
+      'images/experiential_promotions/exp_2.jpg',
+      'images/experiential_promotions/exp_3.jpg',
+      'images/experiential_promotions/exp_4.jpg',
+      'images/experiential_promotions/kc_1.jpg',
+      'images/experiential_promotions/capt_1.jpg',
+      'images/experiential_promotions/stch_1.jpg',
+      'images/experiential_promotions/captain_morgan1.jpg',
+      'images/experiential_promotions/gordons_1.jpg',
+    ]
   },
   'branding-strategy': {
     title: 'Branding Strategy',
