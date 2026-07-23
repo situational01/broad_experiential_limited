@@ -145,13 +145,13 @@ img { max-width: 100%; height: auto; display: block; }
 .btn:hover::after { transform: scaleX(1); transform-origin: left; }
 .btn--primary { background: var(--color-secondary); color: var(--color-white); border-color: var(--color-secondary); }
 .btn--primary:hover {
-  background: var(--color-primary); border-color: var(--color-primary);
+  background: var(--color-secondary); border-color: var(--color-primary);
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(59, 94, 122, 0.35);
 }
 .btn--outline { background: transparent; color: var(--color-white); border-color: rgba(255, 255, 255, 0.5); }
 .btn--outline:hover {
-  background: var(--color-white); color: var(--color-primary);
+  background: var(--color-white); color: var(--color-body);
   transform: translateY(-3px);
   border-color: var(--color-white);
   box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
