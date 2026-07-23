@@ -13,7 +13,20 @@ const serviceData = {
       'images/car_branding/carbranding2.webp',
       'images/car_branding/carbranding4.jpg',
       'images/car_branding/carbranding5.jpg',
-      'images/car_branding/carbranding6.jpg'
+      'images/car_branding/carbranding6.jpg',
+      'images/car_branding/tvs.jpeg',
+      'images/car_branding/tvs1.jpeg',
+      'images/car_branding/tvs2.jpeg',
+      'images/car_branding/tvs3.jpeg',
+      'images/car_branding/van.jpeg',
+      'images/car_branding/van1.jpeg',
+      'images/car_branding/van2.jpeg',
+      'images/car_branding/van3.jpeg',
+      'images/car_branding/shell_1.jpeg',
+      'images/car_branding/lorrybranding.jpeg',
+      'images/car_branding/pepsi.jpeg',
+      'images/car_branding/pepsi1.jpeg',
+      'images/car_branding/pepsi2.jpeg',
     ]
   },
   'shop-branding': {
@@ -129,8 +142,14 @@ const clienteleData = {
     title: 'M-Gas',
     description: 'M-Gas empowers you with affordable and clean cooking solutions.',
     heroImage: 'images/clients/m_gas_logo.jfif',
-    stats: [{ number: '200+', label: 'Partners' }],
-    gallery: []
+    stats: [{ number: '40+', label: 'Projects' }],
+    gallery: ['images/mgas.webp',
+      'images/mgas1.webp',
+      'images/mgas2.webp',
+      'images/mgas3.webp',
+      'images/mgas4.webp',
+      'images/mgas5.webp'
+    ]
   },
   'telkom': {
     title: 'Telkom',
@@ -646,3 +665,4 @@ function showToast(msg, type = 'success') {
   container.appendChild(toast);
   setTimeout(() => toast.remove(), 4000);
 }
+
