@@ -492,3 +492,30 @@ body.detail-active .header, body.detail-active .footer, body.detail-active .scro
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--color-logo-blue); outline-offset: 2px; }
 .skip-to-content { position: fixed; top: -100%; left: 50%; transform: translateX(-50%); background: var(--color-logo-blue); color: #fff; padding: 0.5rem 1rem; border-radius: 0 0 6px 6px; z-index: 10000; font-weight: var(--font-weight-semibold); transition: top 0.3s ease; }
 .skip-to-content:focus { top: 0; }
+
+/* ============================================================
+   PRELOADER – BLUE BACKGROUND
+   ============================================================ */
+.preloader {
+  position: fixed; inset: 0; background: #04D3FF;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 99999; transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.preloader.hidden { opacity: 0; visibility: hidden; }
+.preloader__inner { text-align: center; }
+.preloader__logo-image { width: 80px; height: 80px; object-fit: contain; }
+.preloader__logo-text {
+  font-weight: var(--font-weight-bold); font-size: 1.4rem;
+  color: var(--color-white); letter-spacing: -0.3px;
+  margin-top: 0.8rem;
+}
+.preloader__logo-text span { color: var(--color-primary); }
+.preloader__spinner {
+  width: 30px; height: 30px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin: 1rem auto 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
