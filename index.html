@@ -96,25 +96,24 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png" />
   <link rel="icon" type="image/svg+xml" href="images/favicon_io/favicon.svg" />
   <link rel="manifest" href="images/favicon_io/site.webmanifest" />
-  <meta name="msapplication-TileColor" content="#0A2C4C" />
-  <meta name="theme-color" content="#0A2C4C" />
+  <meta name="msapplication-TileColor" content="#1B2838" />
+  <meta name="theme-color" content="#1B2838" />
 
   <link rel="preload" as="image" href="images/logo.webp" />
   <link rel="preload" href="styles.css" as="style" />
   
-  <!-- Critical CSS - renders immediately -->
   <style>
-    .preloader{position:fixed;inset:0;background:#04D3FF;display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity .2s ease,visibility .2s ease}
+    .preloader{position:fixed;inset:0;background:linear-gradient(135deg,#1B2838,#2C4A6B);display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity .3s ease,visibility .3s ease}
     .preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
-    .preloader__spinner{width:30px;height:30px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;margin:1rem auto 0}
+    .preloader__spinner{width:30px;height:30px;border:2px solid rgba(255,255,255,.2);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;margin:1rem auto 0}
     @keyframes spin{to{transform:rotate(360deg)}}
-    body{margin:0;padding:0;overflow-x:hidden;width:100%;max-width:100vw}
+    body{margin:0;padding:0;overflow-x:hidden;width:100%;max-width:100vw;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
     .preloader__logo-image{width:80px;height:80px;object-fit:contain}
     .preloader__logo-text{font-weight:700;font-size:1.4rem;color:#fff;letter-spacing:-.3px;margin-top:.8rem;text-align:center}
-    .preloader__logo-text span{color:#1a2a3a}
+    .preloader__logo-text span{color:#00B4D8}
     .preloader__inner{text-align:center}
-    .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;box-shadow:0 1px 10px rgba(0,0,0,.04);height:110px}
-    .skip-to-content{position:fixed;top:-100%;left:50%;transform:translateX(-50%);background:#04D3FF;color:#fff;padding:.5rem 1rem;border-radius:0 0 6px 6px;z-index:10000;font-weight:600;transition:top .3s ease;text-decoration:none}
+    .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.04);height:110px}
+    .skip-to-content{position:fixed;top:-100%;left:50%;transform:translateX(-50%);background:#00B4D8;color:#fff;padding:.5rem 1rem;border-radius:0 0 6px 6px;z-index:10000;font-weight:600;transition:top .3s ease;text-decoration:none}
     .skip-to-content:focus{top:0}
     @media(max-width:768px){.header{height:60px}}
   </style>
@@ -138,35 +137,23 @@
     </div>
   </div>
 
-  <!-- Emergency preloader removal - fires immediately -->
   <script>
     (function() {
       var maxWait = 2000;
       var startTime = Date.now();
       var preloader = document.getElementById('preloader');
-      
       if (!preloader) return;
-      
       var checkReady = function() {
         if (document.readyState === 'interactive' || document.readyState === 'complete') {
           preloader.classList.add('hidden');
-          setTimeout(function() {
-            if (preloader && preloader.parentNode) {
-              preloader.style.display = 'none';
-            }
-          }, 400);
+          setTimeout(function() { if (preloader && preloader.parentNode) preloader.style.display = 'none'; }, 400);
         } else if (Date.now() - startTime > maxWait) {
           preloader.classList.add('hidden');
-          setTimeout(function() {
-            if (preloader && preloader.parentNode) {
-              preloader.style.display = 'none';
-            }
-          }, 400);
+          setTimeout(function() { if (preloader && preloader.parentNode) preloader.style.display = 'none'; }, 400);
         } else {
           setTimeout(checkReady, 50);
         }
       };
-      
       checkReady();
     })();
   </script>
